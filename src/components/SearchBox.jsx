@@ -11,7 +11,9 @@ function SearchBox() {
         <div className="input-wrapper">
           <FaSearch style={{ color: "gray", size: 42 }} />
           <input type="text" placeholder="Search for places to explore..." />
+          <button type="submit">Search</button>
         </div>
+       
       </div>
     </>
   );
