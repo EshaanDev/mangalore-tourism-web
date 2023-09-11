@@ -1,17 +1,59 @@
-.search-section{
-    width: 100%;
-    background-image: url('/src/assets/images/bg-beach.jpg');
-    height: 550px;
-    margin-top: 0;
-}
-.searchbar{
-    position: relative;
-    width: 40%;
-    height: 10%;
-    margin-left: 460px;
-    margin-top: 200px;
-    border-radius: 15px;
-    padding: 8px;
-    border: 1px solid black;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
+
+.search-section {
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.753),
+      rgba(133, 131, 131, 0.5)
+    ),
+    url("/src/assets/images/bg-beach.jpg");
+  font-family: "Space Grotesk", sans-serif;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  height: 550px;
+  margin-top: 0;
+  box-shadow: 5px 10px 18px rgb(97, 96, 96);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
 }
 
+.search-section h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.search-section span {
+  color: rgb(90, 175, 183);
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  background-color: white;
+  width: 600px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.input-wrapper input {
+  background-color: transparent;
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+  font-size: 1.2rem;
+  margin: 8px;
+  padding: 5px;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+}
+
+.search-section button {
+  height: 70px;
+}
