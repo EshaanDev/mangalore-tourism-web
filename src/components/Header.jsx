@@ -1,9 +1,9 @@
 import React from "react";
-import { BsPencil, BsBookmarkCheck } from "react-icons/bs";
-import logo from '../assets/icons/logo.jpg'
+import { FaUmbrellaBeach } from "react-icons/fa";
 import { FcSportsMode } from "react-icons/fc";
-import { AiOutlineSearch } from "react-icons/ai";
-import { GiPalmTree } from "react-icons/gi";
+import { GiParkBench } from 'react-icons/gi';
+import { LuHotel } from 'react-icons/lu';
+import { MdOutlineTempleHindu } from 'react-icons/md';
 import "./comp-styles/Header.css";
 
 function Header() {
@@ -12,28 +12,49 @@ function Header() {
       <header>
         
         <h1>TourMyMangalore</h1>
-        {/* <img src={logo} alt="" /> */}
-        {/* <AiOutlineSearch style={{marginLeft: "21rem", position: "absolute"}} color="gray" size="1.5em"/> */}
-        <input type="search" placeholder="Search" />
-
+       
         <nav>
           <ul>
             <li>
               <a href="">
                 {" "}
-                <BsPencil /> Review
+                <FaUmbrellaBeach />  Beaches
               </a>
             </li>
             <li>
               <a href="">
                 {" "}
-                <BsBookmarkCheck /> Bookmarks
+                <LuHotel />  Hotels
               </a>
             </li>
             <li>
               <a href="">
                 {" "}
-                <FcSportsMode /> Things to do
+                <MdOutlineTempleHindu /> Religious Places
+              </a>
+            </li>
+            <li>
+              <a href="">
+                {" "}
+                <GiParkBench /> Parks
+              </a>
+            </li>
+            <li>
+              <a href="">
+                {" "}
+                <FcSportsMode /> Religious Places
+              </a>
+            </li>
+            <li>
+              <a href="">
+                {" "}
+                <FcSportsMode /> Religious Places
+              </a>
+            </li>
+            <li>
+              <a href="">
+                {" "}
+                <FcSportsMode /> Religious Places
               </a>
             </li>
             <li>
