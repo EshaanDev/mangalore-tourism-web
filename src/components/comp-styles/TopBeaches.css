@@ -1,18 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
-.hotel-cards {
-  height: 300px;
-  width: 250px;
-  border: 2px solid black;
-  margin-left: 40px;
-  margin-top: 10px;
-}
  
  
- .hotel-cards{
-    height: 300px;
+ .beach-cards{
+    height: 350px;
     width: 250px;
-    border: 2px solid black;
+    
     margin-left: 40px;
     margin-top: 10px;
     display: inline-block;
@@ -21,25 +14,19 @@
     
  }
 
-.top-hotel-section {
-  font-family: "Poppins";
-  width: 100%;
-  padding: 40px 40px 40px 40px;
-}
-
- .top-hotel-section{
+ .top-beaches-section{
     font-family: 'Poppins';
-    width: 100%;
+    width: 70%;
     padding: 40px 40px 40px 40px;
     /* display: inline-block;
      */
  }
 
- .hotel-cards img{
-   height: 65%;
-   width: 96%;
-   padding: 5px;
-   position: relative;
+ .beach-cards img{
+  height: 250px;
+  width: 250px;
+  padding: 5px;
+  position: relative;
 
  }
 
@@ -47,6 +34,6 @@
    background-color: orange;
  }
 
- .hotel-cards p{
+ .beach-cards p{
    padding-left: 5px;
  }

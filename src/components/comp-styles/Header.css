@@ -5,7 +5,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 5px 10px 18px gray;
   padding: 15px;
 }
 
@@ -71,4 +70,8 @@ ul button:hover {
   color: black;
   background-color: white;
   cursor: pointer;
+}
+
+a .live{
+  color: rgba(250, 2, 2, 0.947);
 }

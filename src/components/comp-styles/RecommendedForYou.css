@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
+
+.recommended-cards {
+  height: 350px;
+  width: 250px;
+  /* border: 2px solid black; */
+  /* margin-left: 40px; */
+  margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  padding-top: 0;
+  cursor: pointer;
+}
+
+.recommended-for-you-section {
+  font-family: "Poppins";
+  width: 70%;
+  padding: 40px 40px 40px 40px;
+  /* display: inline-block;
+     */
+  margin-top: 40px;
+    
+}
+
+.recommended-cards img {
+  height: 250px;
+  width: 250px;
+  padding: 5px;
+  position: relative;
+}
+
+span .checked {
+  background-color: orange;
+}
+
+.recommended-cards p {
+  padding-left: 5px;
+}
