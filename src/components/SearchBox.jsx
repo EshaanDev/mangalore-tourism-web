@@ -13,7 +13,6 @@ function SearchBox() {
           <input type="text" placeholder="Search for places to explore..." />
           <button type="submit">Search</button>
         </div>
-       
       </div>
     </>
   );

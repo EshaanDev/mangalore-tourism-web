@@ -9,7 +9,7 @@ function Header() {
   return (
     <>
       <header>
-        <h1>TourMyMangalore.in</h1>
+        <h2>TourMyMangalore.in</h2>
 
         <nav>
           <ul>
@@ -28,6 +28,10 @@ function Header() {
             <li>
               <GiParkBench />
               <a href="#"> Parks</a>
+            </li>
+            <li>
+              <GiParkBench />
+              <a href="#"> Live Events</a>
             </li>
 
             <li>
