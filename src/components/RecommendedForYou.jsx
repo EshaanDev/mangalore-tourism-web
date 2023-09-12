@@ -10,61 +10,61 @@ function RecommendedForYou() {
         <h1>Recommended For You</h1>
         <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
-        <div className="hotel-cards">
+        <div className="recommended-cards">
           <img src={hotelimg }/>
-          <p>Name Of the Hotel</p>
+          <p>Name Of the Recommended</p>
           <p>Location</p>
           <p><FaStar/><FaStar/><FaStar/><FaStar/><FaRegStar/></p>
         </div>
