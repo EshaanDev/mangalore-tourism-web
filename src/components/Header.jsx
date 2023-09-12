@@ -1,39 +1,62 @@
 import React from "react";
 import { FaUmbrellaBeach } from "react-icons/fa";
-import { GiParkBench } from "react-icons/gi";
-import { LuHotel } from "react-icons/lu";
-import { MdOutlineTempleHindu } from "react-icons/md";
+import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
+import { LuHotel } from 'react-icons/lu';
+import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
+
 import "./comp-styles/Header.css";
 
 function Header() {
   return (
     <>
       <header>
-        <h2>TourMyMangalore.in</h2>
-
+        
+        <h1>TourMyMangalore</h1>
+       
         <nav>
           <ul>
             <li>
-              <FaUmbrellaBeach />
-              <a href="#"> Beaches</a>
+            <FaUmbrellaBeach />
+              <a href="">
+                {" "}
+                  Beaches
+              </a>
             </li>
             <li>
-              <LuHotel />
-              <a href="#"> Hotels</a>
+            <LuHotel />
+              <a href="">
+                {" "}
+                  Hotels
+              </a>
             </li>
             <li>
-              <MdOutlineTempleHindu />
-              <a href="#"> Religious Places</a>
+            <MdOutlineTempleHindu />
+              <a href="">
+                {" "}
+                 Religious Places
+              </a>
             </li>
             <li>
-              <GiParkBench />
-              <a href="#"> Parks</a>
+            <GiParkBench />
+              <a href="">
+                {" "}
+                 Parks
+              </a>
             </li>
             <li>
-              <GiParkBench />
-              <a href="#"> Live Events</a>
+            <GiJugglingClubs />
+              <a href="">
+                {" "}
+                 Clubs
+              </a>
             </li>
-
+            <li>
+            <MdOutlineLiveTv />
+              <a href="">
+                {" "}
+                 <span className="live">Live Events</span>
+              </a>
+            </li>
             <li>
               <button>Sign In</button>
             </li>

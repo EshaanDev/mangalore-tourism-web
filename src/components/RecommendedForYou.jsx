@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import hotelimg from "../assets/images/hotel1.jpg";
-import "./comp-styles/TopHotels.css";
+import "./comp-styles/RecommendedForYou.css";
 
-function TopHotels() {
+function RecommendedForYou() {
   return (
     <>
-      <section className="top-hotel-section">
-        <h1>Top Hotels</h1>
-        <div className="hotel-cards">
+      <section className="recommended-for-you-section">
+        <h1>Recommended For You</h1>
+        <div className="recommended-cards">
           <img src={hotelimg }/>
           <p>Name Of the Hotel</p>
           <p>Location</p>
@@ -70,7 +70,7 @@ function TopHotels() {
         </div>
       </section>
     </>
-  );
+  )
 }
 
-export default TopHotels;
+export default RecommendedForYou

@@ -72,3 +72,7 @@ ul button:hover {
   background-color: white;
   cursor: pointer;
 }
+
+a .live{
+  color: rgba(250, 2, 2, 0.947);
+}
