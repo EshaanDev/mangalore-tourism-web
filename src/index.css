@@ -1,17 +1,17 @@
-html,body{
-    max-width: 100%;
-    overflow-x: hidden;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-*{
-    
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.searchbox{
-    position: relative;
-    width: 20%;
-    height: 10%;
-    padding-left: 200px;
+.searchbox {
+  position: relative;
+  width: 20%;
+  height: 10%;
+  padding-left: 200px;
 }
