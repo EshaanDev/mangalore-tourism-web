@@ -1,6 +1,5 @@
 import React from "react";
 import { FaUmbrellaBeach } from "react-icons/fa";
-import { FcSportsMode } from "react-icons/fc";
 import { GiParkBench } from "react-icons/gi";
 import { LuHotel } from "react-icons/lu";
 import { MdOutlineTempleHindu } from "react-icons/md";
@@ -16,19 +15,19 @@ function Header() {
           <ul>
             <li>
               <FaUmbrellaBeach />
-              <a href=""> Beaches</a>
+              <a href="#"> Beaches</a>
             </li>
             <li>
               <LuHotel />
-              <a href=""> Hotels</a>
+              <a href="#"> Hotels</a>
             </li>
             <li>
               <MdOutlineTempleHindu />
-              <a href=""> Religious Places</a>
+              <a href="#"> Religious Places</a>
             </li>
             <li>
               <GiParkBench />
-              <a href=""> Parks</a>
+              <a href="#"> Parks</a>
             </li>
 
             <li>
