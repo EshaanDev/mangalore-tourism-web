@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import InfoSection from "./components/InfoSection";
 import RecommendedForYou from "./components/RecommendedForYou";
 import SearchBox from "./components/SearchBox";
 import TopBeaches from "./components/TopBeaches";
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <SearchBox />
+      <InfoSection/>
       <RecommendedForYou/>
       <TopBeaches/>
       <TopRestaurants/> 
