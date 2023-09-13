@@ -2,6 +2,7 @@ import React from "react";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
 import { LuHotel } from 'react-icons/lu';
+import {Logo} from '../assets/icons/Logo.svg'
 import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
 
 import "./comp-styles/Header.css";
@@ -9,10 +10,8 @@ import "./comp-styles/Header.css";
 function Header() {
   return (
     <>
-      <header>
-        
-        <h2>TourMyMangalore</h2>
-       
+      <header>      
+       <h1>TourMyMangalore</h1>
         <nav>
           <ul>
             <li>
