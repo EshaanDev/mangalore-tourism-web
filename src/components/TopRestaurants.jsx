@@ -1,9 +1,9 @@
 import React from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import hotelimg from "../assets/images/hotel1.jpg";
-import "./comp-styles/TopRestaurants.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import hotelimg from "../assets/images/hotel1.jpg";
+import "./comp-styles/TopRestaurants.css";
 
 function TopRestaurants() {
   const responsive = {
