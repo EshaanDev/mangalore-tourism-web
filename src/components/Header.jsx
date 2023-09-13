@@ -1,6 +1,7 @@
 import React from "react";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
+import { IoMdRestaurant } from 'react-icons/io';
 import { LuHotel } from 'react-icons/lu';
 import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
 
@@ -41,6 +42,13 @@ function Header() {
               <a href="">
                 {" "}
                  Parks
+              </a>
+            </li>
+            <li>
+            <IoMdRestaurant />
+              <a href="">
+                {" "}
+                 Restaurants
               </a>
             </li>
             <li>

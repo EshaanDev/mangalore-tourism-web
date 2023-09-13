@@ -1,10 +1,10 @@
 import "./App.css";
-
 import Header from "./components/Header";
 import RecommendedForYou from "./components/RecommendedForYou";
 import SearchBox from "./components/SearchBox";
 import TopBeaches from "./components/TopBeaches";
 import TopRestaurants from "./components/TopRestaurants";
+
 
 function App() {
   return (
@@ -13,8 +13,7 @@ function App() {
       <SearchBox />
       <RecommendedForYou/>
       <TopBeaches/>
-      <TopRestaurants/>
-
+      <TopRestaurants/> 
     </div>
   );
 }

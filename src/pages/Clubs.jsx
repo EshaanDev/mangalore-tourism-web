@@ -1,15 +1,14 @@
 import React from 'react';
 import { FaRegStar, FaStar } from "react-icons/fa";
 import hotelimg from "../assets/images/hotel1.jpg";
-import "../components/comp-styles/Hotels.css";
+import "../components/comp-styles/Clubs.css";
 
-function Hotels() {
+function Clubs() {
   return (
     <>
-     <h4 className='top-line'>Our comprehensive hotel listings provide in-depth information, including reviews, ratings, and exclusive deals, empowering you to make informed choices and secure the ideal lodging for your next travel adventure. 
-     Let's explore them.</h4>
-    <section className="hotels-section">
-          <div className="hotels-cards">
+     <h4 className='top-line'>Whether you're into electronic music, live bands, or trendy rooftop venues, our tourism website features an eclectic selection of clubs that cater to all tastes, ensuring an exhilarating nightlife experience for every traveler.</h4>
+    <section className="clubs-section">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -21,7 +20,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -33,7 +32,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -45,7 +44,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -57,7 +56,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -69,7 +68,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -81,7 +80,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -93,7 +92,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -105,7 +104,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -117,7 +116,7 @@ function Hotels() {
               <FaRegStar />
             </p>
           </div>
-          <div className="hotels-cards">
+          <div className="clubs-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
@@ -134,4 +133,4 @@ function Hotels() {
   )
 }
 
-export default Hotels
+export default Clubs
