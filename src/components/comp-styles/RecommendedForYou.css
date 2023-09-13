@@ -2,14 +2,14 @@
 
 .recommended-cards {
   height: 350px;
-  width: 250px;
-  /* border: 2px solid black; */
-  /* margin-left: 40px; */
-  margin-top: 10px;
-  display: inline-block;
-  position: relative;
-  padding-top: 0;
-  cursor: pointer;
+    width: 250px;
+    
+    margin-left: 40px;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    padding-top: 0;
+    cursor: pointer;
 }
 
 .recommended-for-you-section {
