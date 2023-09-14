@@ -12,53 +12,53 @@ function Header() {
   return (
     <>
       <header>      
-       <h1>TourMyMangalore</h1>
+       <h2>TourMyMangalore</h2>
         <nav>
           <ul>
             <li>
-            <FaUmbrellaBeach />
+            <FaUmbrellaBeach size={'15px'} />
               <a href="">
                 {" "}
                   Beaches
               </a>
             </li>
             <li>
-            <LuHotel />
+            <LuHotel size={'15px'}/>
               <a href="">
                 {" "}
                   Hotels
               </a>
             </li>
             <li>
-            <MdOutlineTempleHindu />
+            <MdOutlineTempleHindu size={'15px'}/>
               <a href="">
                 {" "}
                  Religious Places
               </a>
             </li>
             <li>
-            <GiParkBench />
+            <GiParkBench size={'15px'} />
               <a href="">
                 {" "}
                  Parks
               </a>
             </li>
             <li>
-            <IoMdRestaurant />
+            <IoMdRestaurant size={'15px'}/>
               <a href="">
                 {" "}
                  Restaurants
               </a>
             </li>
             <li>
-            <GiJugglingClubs />
+            <GiJugglingClubs size={'15px'}/>
               <a href="">
                 {" "}
                  Clubs
               </a>
             </li>
             <li>
-            <MdOutlineLiveTv />
+            <MdOutlineLiveTv size={'15px'}/>
               <a href="">
                 {" "}
                  <span className="live">Live Events</span>

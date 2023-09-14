@@ -17,6 +17,7 @@ ul li {
   justify-content: center;
   align-items: center;
   margin: 5px;
+  font-size: .5rem;
 }
 
 header input {
