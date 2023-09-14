@@ -3,8 +3,8 @@ import { FaUmbrellaBeach } from "react-icons/fa";
 import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
 import { IoMdRestaurant } from 'react-icons/io';
 import { LuHotel } from 'react-icons/lu';
-import {Logo} from '../assets/icons/Logo.svg'
 import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 import "./comp-styles/Header.css";
 
@@ -12,57 +12,57 @@ function Header() {
   return (
     <>
       <header>      
-       <h2>TourMyMangalore</h2>
+       <h1>TourMyMangalore</h1>
         <nav>
           <ul>
             <li>
-            <FaUmbrellaBeach size={'15px'} />
+            <FaUmbrellaBeach />
               <a href="">
                 {" "}
                   Beaches
-              </a>
+                </Link>
             </li>
             <li>
-            <LuHotel size={'15px'}/>
+            <LuHotel />
               <a href="">
                 {" "}
                   Hotels
-              </a>
+              </Link>
             </li>
             <li>
-            <MdOutlineTempleHindu size={'15px'}/>
+            <MdOutlineTempleHindu />
               <a href="">
                 {" "}
                  Religious Places
-              </a>
+              </Link>
             </li>
             <li>
-            <GiParkBench size={'15px'} />
+            <GiParkBench />
               <a href="">
                 {" "}
                  Parks
-              </a>
+              </Link>
             </li>
             <li>
-            <IoMdRestaurant size={'15px'}/>
+            <IoMdRestaurant />
               <a href="">
                 {" "}
                  Restaurants
-              </a>
+              </Link>
             </li>
             <li>
-            <GiJugglingClubs size={'15px'}/>
+            <GiJugglingClubs />
               <a href="">
                 {" "}
                  Clubs
-              </a>
+              </Link>
             </li>
             <li>
-            <MdOutlineLiveTv size={'15px'}/>
+            <MdOutlineLiveTv />
               <a href="">
                 {" "}
                  <span className="live">Live Events</span>
-              </a>
+             </Link>
             </li>
             <li>
               <button>Sign In</button>

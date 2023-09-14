@@ -6,6 +6,7 @@ import "../components/comp-styles/Restaurants.css";
 function Restaurants() {
   return (
     <>
+    <input type="search" className='search-each' id="" placeholder='Search' />
      <h4 className='top-line'>Our restaurant listings provide comprehensive details, including cuisine types, reviews, and reservation options, empowering you to savor unforgettable moments and indulge in the finest gastronomic delights during your travels.</h4>
     <section className="restaurants-section">
           <div className="restaurants-cards">

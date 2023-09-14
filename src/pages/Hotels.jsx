@@ -6,6 +6,7 @@ import "../components/comp-styles/Hotels.css";
 function Hotels() {
   return (
     <>
+    <input type="search" className='search-each' id="" placeholder='Search' />
      <h4 className='top-line'>Our comprehensive hotel listings provide in-depth information, including reviews, ratings, and exclusive deals, empowering you to make informed choices and secure the ideal lodging for your next travel adventure. 
      Let's explore them.</h4>
     <section className="hotels-section">
