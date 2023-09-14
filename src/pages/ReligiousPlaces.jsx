@@ -6,6 +6,7 @@ import "../components/comp-styles/ReligiousPlaces.css";
 function ReligiousPlaces() {
   return (
     <>
+    <input type="search" className='search-each' id="" placeholder='Search' />
      <h4 className='top-line'>Delve into a spiritual journey like never before with our meticulously curated list of religious places, showcasing a diverse array of sacred sites, temples, mosques, and churches, each steeped in history and culture..</h4>
     <section className="religiousplaces-section">
           <div className="religiousplaces-cards">

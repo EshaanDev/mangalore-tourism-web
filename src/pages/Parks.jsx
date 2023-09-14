@@ -6,6 +6,7 @@ import "../components/comp-styles/Parks.css";
 function Parks() {
   return (
     <>
+    <input type="search" className='search-each' id="" placeholder='Search' />
      <h4 className='top-line'>Our tourism website offers a detailed directory of parks, encompassing serene city green spaces and breathtaking natural reserves, catering to both relaxation seekers and outdoor enthusiasts.</h4>
     <section className="parks-section">
           <div className="parks-cards">

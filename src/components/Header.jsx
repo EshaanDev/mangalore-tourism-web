@@ -3,66 +3,65 @@ import { FaUmbrellaBeach } from "react-icons/fa";
 import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
 import { IoMdRestaurant } from 'react-icons/io';
 import { LuHotel } from 'react-icons/lu';
-import {Logo} from '../assets/icons/Logo.svg'
 import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 import "./comp-styles/Header.css";
 
 function Header() {
   return (
     <>
-      <header>      
+      <header> 
+        <Link to='/'>    
        <h1>TourMyMangalore</h1>
+       </Link>
         <nav>
           <ul>
             <li>
             <FaUmbrellaBeach />
-              <a href="">
-                {" "}
+              <Link to = '/beach' >
                   Beaches
-              </a>
+                </Link>
             </li>
             <li>
             <LuHotel />
-              <a href="">
-                {" "}
+              <Link to = "/hotels">
                   Hotels
-              </a>
+              </Link>
             </li>
             <li>
             <MdOutlineTempleHindu />
-              <a href="">
-                {" "}
+             <Link to = "/religious">
                  Religious Places
-              </a>
+              </Link>
             </li>
             <li>
             <GiParkBench />
-              <a href="">
+              <Link to = "/parks">
                 {" "}
                  Parks
-              </a>
+              </Link>
             </li>
             <li>
             <IoMdRestaurant />
-              <a href="">
+              <Link to = "/restaurants">
                 {" "}
                  Restaurants
-              </a>
+              </Link>
             </li>
             <li>
             <GiJugglingClubs />
-              <a href="">
+              <Link to = "/clubs">
                 {" "}
                  Clubs
-              </a>
+              </Link>
             </li>
             <li>
             <MdOutlineLiveTv />
-              <a href="">
+              <Link to = "/live">
                 {" "}
                  <span className="live">Live Events</span>
-              </a>
+             </Link>
             </li>
             <li>
               <button>Sign In</button>
