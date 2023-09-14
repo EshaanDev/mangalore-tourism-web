@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
 .search-section {
+ overflow: hidden;
+ position: relative;
+}
+.img-holder:hover{
+  transform: scale(1.2);
+
+}
+.img-holder{
   width: 100%;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.753),
@@ -19,6 +27,9 @@
   gap: 80px;
   justify-content: center;
   align-items: center;
+  background-position: center;
+  background-size: cover;
+  transition: .5s;
 }
 
 @keyframes fadeInAnimation {
@@ -30,7 +41,7 @@
    }
 }
 
-.search-section h1 {
+.search-section h2 {
   font-size: 3rem;
   color: white;
   animation: fadeInAnimation ease 5s;
@@ -45,7 +56,7 @@
 .input-wrapper {
   display: flex;
   align-items: center;
-  height: 2.5rem;
+  height: 2rem;
   background-color: white;
   width: 650px;
   padding: 16px;
@@ -54,7 +65,7 @@
 }
 
 .input-wrapper input {
-  background-color: transparent;
+  background-color: transparent;    
   border: 1px solid white;
   height: 100%;
   width: 100%;
@@ -78,5 +89,5 @@
 }
 
 .search-section button {
-  height: 70px;
+  height: 65px;
 }
