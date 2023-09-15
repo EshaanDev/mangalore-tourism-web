@@ -1,11 +1,13 @@
 html,body {
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
   padding: 0;
   margin: 0;
+  
 }
 
 .searchbox {

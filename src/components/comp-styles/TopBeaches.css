@@ -5,7 +5,6 @@
  .beach-cards{
     height: 350px;
     width: 250px;
-    margin-left: 40px;
     margin-top: 10px;
     display: inline-block;
     position: relative;
@@ -36,4 +35,5 @@
 
  .beach-cards p{
    padding-left: 5px;
+   font-size: 1rem;
  }

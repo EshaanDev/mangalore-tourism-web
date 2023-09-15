@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
 .info-section{
-    width: 100%;
+   
     padding: 60px;
     height: 350px;
     /* background-color: rgba(206, 170, 103, 0.436); */
     background-color: rgba(245, 222, 179, 0.523);
     display: flex;
     justify-content: space-around;
+    border-radius: 0px 0px 40px 40px;
 }
 
 .info-section img{
