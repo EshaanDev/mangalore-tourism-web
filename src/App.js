@@ -25,7 +25,9 @@ function App() {
         <Route path='/religious' element = {<ReligiousPlaces/>}/>
         <Route path='/live' element = {<LiveEvents/>}/>
         <Route path='/restaurants' element = {<Restaurants/>}/>
+        {/* <Route to = "/beachinfo" element = {<BeachInfo/>}/> */}
       </Routes>
+
     </div>
   );
 }
