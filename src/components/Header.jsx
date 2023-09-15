@@ -1,7 +1,6 @@
 // import React from "react";
 import { signInWithPopup } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { FaUmbrellaBeach } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { auth, provider } from "../config.js";
 
@@ -33,58 +32,58 @@ function Header() {
         const profilePic = data.user.photoURL;
         localStorage.setItem("profilePic", profilePic);
       })
-      .catch((err) => {});
+      .catch((err) => { });
   };
 
   return (
     <>
-      <header> 
-        <Link to='/'>    
-       <h1 className="tour" >TourMyMangalore</h1>
-       </Link>
+      <header>
+        <Link to="/">
+          <img src={Logo} alt="" />
+        </Link>
         <nav>
           <ul>
             <li>
-              <FaUmbrellaBeach />
+              {/* <FaUmbrellaBeach /> */}
               <Link to="/beach">
                 <p>Beaches</p>
               </Link>
             </li>
             <li>
-              {/* <LuHotel /> */}
+              <LuHotel className="hover-change-icon" />
               <Link to="/hotels">
                 <p>Hotels</p>
               </Link>
             </li>
             <li>
-              {/* <MdOutlineTempleHindu /> */}
+              <MdOutlineTempleHindu className="hover-change-icon" />
               <Link to="/religious">
-                <p>Religious Places</p>{" "}
+                <p>Religious Places</p>
               </Link>
             </li>
             <li>
-              {/* <GiParkBench /> */}
+              <GiParkBench className="hover-change-icon" />
               <Link to="/parks">
                 {" "}
                 <p>Parks</p>
               </Link>
             </li>
             <li>
-              {/* <IoMdRestaurant /> */}
+              <IoMdRestaurant className="hover-change-icon" />
               <Link to="/restaurants">
                 {" "}
                 <p>Restaurants</p>
               </Link>
             </li>
             <li>
-              {/* <GiJugglingClubs /> */}
+              <GiJugglingClubs className="hover-change-icon" />
               <Link to="/clubs">
                 {" "}
                 <p>Clubs</p>
               </Link>
             </li>
             <li>
-              {/* <MdOutlineLiveTv /> */}
+              <MdOutlineLiveTv className="hover-change-icon" />
               <Link to="/live">
                 {" "}
                 <span className="live">
@@ -100,11 +99,12 @@ function Header() {
                   <h2>Logout</h2>
                 </div>
               ) : (
-                <button onClick={GoogleSignIn}>Sign In</button>
+                <button className="signIn-btn" onClick={GoogleSignIn}>Sign In</button>
               )}
             </li>
           </ul>
         </nav>
+
       </header>
     </>
   );

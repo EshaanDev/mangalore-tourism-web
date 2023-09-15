@@ -5,9 +5,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-direction: column;
   padding: 15px;
   text-decoration: none;
+}
+
+.hover-change-icon:hover{
+  color: white;
 }
 
 header img {
@@ -43,6 +47,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   justify-content: center;
+  gap: 20px;
 }
 
 ul a {
@@ -57,9 +62,13 @@ ul a {
 }
 
 ul li {
-  margin-right: 20px;
+  /* margin-right: 20px; */
+  height: 40px;
   text-decoration: none;
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul button {
@@ -78,14 +87,14 @@ ul button {
   display: flex;
   flex-direction: row;
   font-size: 0.7rem;
- justify-content: center;
+  justify-content: center;
   align-items: center;
   gap: 20px;
- margin-top: 5px;
+  margin-top: 5px;
   cursor: pointer;
 }
 
-.user-div h2:hover{
+.user-div h2:hover {
   color: red;
 }
 
