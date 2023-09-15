@@ -32,7 +32,7 @@ function RecommendedForYou() {
       <section className="recommended-for-you-section">
         <h1>Recommended For You</h1>
         <h5>Best recommended places in Mangalore</h5>
-        <Carousel responsive={responsive}>
+        {/* <Carousel responsive={responsive}> */}
           <div className="recommended-cards">
             <img src={hotelimg} />
             <p>Name Of the Recommended</p>
@@ -153,7 +153,7 @@ function RecommendedForYou() {
               <FaRegStar />
             </p>
           </div>
-        </Carousel>
+        {/* </Carousel> */}
       </section>
     </>
   );

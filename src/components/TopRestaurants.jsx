@@ -30,7 +30,7 @@ function TopRestaurants() {
       <section className="top-restaurants-section">
         <h1>Top Restaurant</h1>
         <h5>Best recommended Restaurants in Mangalore</h5>
-        <Carousel responsive={responsive} style={{ margin: "0" }}>
+        {/* <Carousel responsive={responsive} style={{ margin: "0" }}> */}
           <div className="restaurant-cards">
             <img src={hotelimg} />
             <p>Name Of the Restaurant</p>
@@ -151,7 +151,7 @@ function TopRestaurants() {
               <FaRegStar />
             </p>
           </div>
-        </Carousel>
+        {/* </Carousel> */}
       </section>
     </>
   );

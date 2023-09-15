@@ -30,7 +30,7 @@ function TopBeaches() {
       <section className="top-beaches-section">
         <h1>Top Beaches</h1>
         <h5>Best recommended Beaches in Mangalore</h5>
-        <Carousel responsive={responsive} style={{ margin: "0" }}>
+        {/* <Carousel responsive={responsive} style={{ margin: "0" }}> */}
           <div className="beach-cards">
             <img src={hotelimg} />
             <p>Name Of the Beach</p>
@@ -151,7 +151,7 @@ function TopBeaches() {
               <FaRegStar />
             </p>
           </div>
-        </Carousel>
+        {/* </Carousel> */}
       </section>
     </>
   );

@@ -47,49 +47,49 @@ function Header() {
         <Link to="/">
           <img src={Logo} alt="" />
         </Link>
-        <nav>
+        
           <ul>
             <li>
-              {/* <FaUmbrellaBeach /> */}
+              <FaUmbrellaBeach className="hover-change-icon" />
               <Link to="/beach">
                 <p>Beaches</p>
               </Link>
             </li>
             <li>
-              {/* <LuHotel /> */}
+              <LuHotel className="hover-change-icon"/>
               <Link to="/hotels">
                 <p>Hotels</p>
               </Link>
             </li>
             <li>
-              {/* <MdOutlineTempleHindu /> */}
+              <MdOutlineTempleHindu className="hover-change-icon"/>
               <Link to="/religious">
-                <p>Religious Places</p>{" "}
+                <p>Religious Places</p>
               </Link>
             </li>
             <li>
-              {/* <GiParkBench /> */}
+              <GiParkBench className="hover-change-icon"/>
               <Link to="/parks">
                 {" "}
                 <p>Parks</p>
               </Link>
             </li>
             <li>
-              {/* <IoMdRestaurant /> */}
+              <IoMdRestaurant className="hover-change-icon"/>
               <Link to="/restaurants">
                 {" "}
                 <p>Restaurants</p>
               </Link>
             </li>
             <li>
-              {/* <GiJugglingClubs /> */}
+              <GiJugglingClubs className="hover-change-icon"/>
               <Link to="/clubs">
                 {" "}
                 <p>Clubs</p>
               </Link>
             </li>
             <li>
-              {/* <MdOutlineLiveTv /> */}
+              <MdOutlineLiveTv className="hover-change-icon"/>
               <Link to="/live">
                 {" "}
                 <span className="live">
@@ -98,18 +98,19 @@ function Header() {
               </Link>
             </li>
             <li>
-              {signIn ? (
+            {signIn ? (
                 <div onClick={userSignOut} className="user-div">
                   |
                   <img src={localStorage.getItem("profilePic")} alt="" />
                   <h2>Logout</h2>
                 </div>
               ) : (
-                <button onClick={GoogleSignIn}>Sign In</button>
+                <button className="signIn-btn" onClick={GoogleSignIn}>Sign In</button>
               )}
             </li>
           </ul>
-        </nav>
+      
+        
       </header>
     </>
   );
