@@ -13,7 +13,7 @@ function Header() {
     <>
       <header> 
         <Link to='/'>    
-       <h1>TourMyMangalore</h1>
+       <h1 className="tour" >TourMyMangalore</h1>
        </Link>
         <nav>
           <ul>

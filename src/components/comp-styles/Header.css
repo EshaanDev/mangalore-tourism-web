@@ -6,6 +6,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  text-decoration: none;
 }
 
 header img {
@@ -74,4 +75,9 @@ ul button:hover {
 
 a .live{
   color: rgba(250, 2, 2, 0.947);
+}
+
+.tour{
+  text-decoration: none;
+  list-style-type: none   ;
 }
