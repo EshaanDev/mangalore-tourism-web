@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
 
+/* *{
+  overflow-y: inherit ;
+} */
 .beaches-cards{
     height: 350px;
     width: 250px;
@@ -44,6 +47,7 @@
   border-radius: 30px;
   width: 400px;
   height: 50px;
+  /* margin-left: 450px; */
   margin-left: 600px;
   padding: 10px;
   margin-bottom: 10px;

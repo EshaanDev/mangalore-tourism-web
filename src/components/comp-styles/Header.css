@@ -59,6 +59,7 @@ ul a {
   align-items: center;
   justify-content: center;
   margin: 10px;
+  gap: 10px;
 }
 
 ul li {
@@ -69,6 +70,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
 }
 
 ul button {
@@ -80,7 +82,8 @@ ul button {
   padding: 4px 4px 4px 4px;
   border: 3px solid black;
   border-radius: 5px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
+  margin-right: 2px;
 }
 
 .user-div {
@@ -117,3 +120,11 @@ a .live {
 header h1 {
   color: black;
 }
+
+ul li:hover{
+  /* color: white; */
+  background-color: grey;
+  border-radius: 10px;
+}
+
+

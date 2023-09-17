@@ -3,7 +3,7 @@
 .info-section{
    
     padding: 60px;
-    height: 350px;
+    height: 500px;
     /* background-color: rgba(206, 170, 103, 0.436); */
     background-color: rgba(245, 222, 179, 0.523);
     display: flex;
@@ -13,7 +13,7 @@
 
 .info-section img{
     height: 100%;
-    width: 30%;
+    width: 50%;
     border-radius: 20px;
     border-top: none;
     border:1px solid black;
