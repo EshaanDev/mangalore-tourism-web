@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/icons/TourMyMangalore-logos_black.png';
 import beachImg from "../assets/images/beach-img.jpg";
+import ReviewForm from '../components/ReviewForm';
+import ReviewList from '../components/ReviewList';
+import StarRating from '../components/StarRating';
 import "../components/comp-styles/BeachInfo.css";
 import "../components/comp-styles/Header.css";
 
@@ -48,11 +51,22 @@ function BeachInfo() {
           Phone: 080 2235 2828</p>
       </div>
     <div className="weather-div">
-      <h1>weather</h1>
+      <h1>Weather</h1>
       <p>28°
          There will be 14 days of rain with an average of 43.0mm rain on those days. Average cloud cover will be 84%</p>
     </div>
     </section>
+    <section className="rating-review-section">
+      <div className="rating-div">
+        <StarRating initialRating={3} maxRating={5}/>
+      </div>
+      <div className="review-div">
+        <ReviewForm/>
+      </div>
+     </section>
+     <section className="Review-List-Section">
+      <ReviewList/>
+     </section>
     </>
   )
 }
