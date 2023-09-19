@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
+
+.Live-Text{
+    font-family: 'Poppins',  sans-serif;
+    padding: 15px;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+}

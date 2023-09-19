@@ -1,0 +1,31 @@
+/* Custom styles for the Previous Arrow */
+.slick-prev {
+  background-color: #007bff; /* Change the background color */
+  color: #fff; /* Change the text color */
+  border: none; /* Remove the border */
+  border-radius: 50%; /* Make it round */
+  width: 40px; /* Set the width */
+  height: 40px; /* Set the height */
+  font-size: 24px; /* Set the font size */
+  position: absolute; /* Position it as needed */
+  top: 50%; /* Center vertically */
+  left: 10px; /* Adjust the left position */
+  transform: translateY(-50%); /* Center vertically */
+  cursor: pointer; /* Add a pointer cursor */
+}
+
+/* Custom styles for the Next Arrow */
+.slick-next {
+  background-color: #007bff; /* Change the background color */
+  color: #fff; /* Change the text color */
+  border: none; /* Remove the border */
+  border-radius: 50%; /* Make it round */
+  width: 40px; /* Set the width */
+  height: 40px; /* Set the height */
+  font-size: 24px; /* Set the font size */
+  position: absolute; /* Position it as needed */
+  top: 50%; /* Center vertically */
+  right: 10px; /* Adjust the right position */
+  transform: translateY(-50%); /* Center vertically */
+  cursor: pointer; /* Add a pointer cursor */
+}
