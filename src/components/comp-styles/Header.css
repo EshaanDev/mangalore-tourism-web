@@ -128,8 +128,12 @@ header h1 {
 
 ul li:hover{
   /* color: white; */
-  background-color: grey;
+  background-color: white;
   border-radius: 10px;
+}
+
+.Logo{
+  height: 90px;
 }
 
 
