@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import hotelimg from "../assets/images/hotel1.jpg";
 import { NextArrow, PrevArrow } from "./CustomArrows";
-import './comp-styles/CustomArrow.css';
+import './comp-styles/CustomArrows.css';
 import "./comp-styles/TopBeaches.css";
 
 function TopBeaches() {
@@ -30,7 +30,7 @@ function TopBeaches() {
   //   },
   // };
 
-  const settings = {
+const settings = {
     dots: true,
     infinite: false,
     speed: 500,

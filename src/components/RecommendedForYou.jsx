@@ -3,11 +3,9 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import Slider from "react-slick";
 import hotelimg from "../assets/images/hotel1.jpg";
 import { NextArrow, PrevArrow } from "./CustomArrows";
-import './comp-styles/CustomArrow.css';
+import './comp-styles/CustomArrows.css';
 import "./comp-styles/RecommendedForYou.css";
 
-//React Carousel
-import "react-multi-carousel/lib/styles.css";
 
 function RecommendedForYou() {
   // const responsive = {
@@ -35,6 +33,8 @@ function RecommendedForYou() {
     speed: 500,
     slidesToShow: 5 ,
     slidesToScroll: 1,
+    prevArrow: <PrevArrow/>, // Use the custom PrevArrow component
+    nextArrow: <NextArrow />, // Use the custom NextArrow component
     responsive: [
       {
         breakpoint: 768,
@@ -51,8 +51,7 @@ function RecommendedForYou() {
         },
       },
     ],
-    prevArrow: <PrevArrow />, // Use the custom PrevArrow component
-    nextArrow: <NextArrow />, // Use the custom NextArrow component
+    
   };
   
   return (

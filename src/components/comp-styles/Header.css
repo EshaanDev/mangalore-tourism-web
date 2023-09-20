@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
+html{
+  overflow: auto;
+}
+
 header {
   font-family: "Space Grotesk", sans-serif;
   display: flex;
@@ -8,10 +12,12 @@ header {
   flex-direction: column;
   padding: 15px;
   text-decoration: none;
+  
 }
 
 .hover-change-icon:hover{
   color: white;
+  cursor: pointer;
 }
 
 header img {
@@ -123,8 +129,13 @@ header h1 {
 
 ul li:hover{
   /* color: white; */
-  background-color: grey;
+  background-color: white;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.Logo{
+  height: 80px;
 }
 
 

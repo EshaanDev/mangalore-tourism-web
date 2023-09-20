@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/icons/TourMyMangalore-logos_black.png';
+import Logo from '../assets/icons/TourMyMangaloreLogoOffi.svg';
 import beachImg from "../assets/images/beach-img.jpg";
 import ReviewForm from '../components/ReviewForm';
 import ReviewList from '../components/ReviewList';
@@ -13,7 +13,7 @@ function BeachInfo() {
     <>
     <header>
     <Link to="/">
-          <img src={Logo} alt="" />
+          <img className="Logo" src={Logo} alt="" />
         </Link>
     </header>
     <section className='beach-img-section'>
