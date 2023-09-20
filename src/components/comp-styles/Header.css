@@ -17,7 +17,6 @@ header {
 
 .hover-change-icon:hover{
   color: white;
-  cursor: pointer;
 }
 
 header img {
@@ -129,13 +128,8 @@ header h1 {
 
 ul li:hover{
   /* color: white; */
-  background-color: white;
+  background-color: grey;
   border-radius: 10px;
-  cursor: pointer;
-}
-
-.Logo{
-  height: 80px;
 }
 
 

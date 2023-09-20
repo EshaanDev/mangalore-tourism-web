@@ -1,6 +1,7 @@
 // import React from "react";
 import { signInWithPopup } from "firebase/auth";
 import { useEffect, useState } from "react";
+import React from "react";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
 import { IoMdRestaurant } from 'react-icons/io';
