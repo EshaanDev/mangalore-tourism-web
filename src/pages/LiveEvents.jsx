@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/Header';
+import '../components/comp-styles/LiveEvents.css';
 
 function LiveEvents() {
   return (
     <>
-    <h1>Currently No Live Events. Stay Tuned!!!!!!</h1>
+    <Header/>
+    <h1 className='Live-Text'>Currently No Live Events. Stay Tuned!!!!!! </h1>
+    <h1 className='Live-Text'>Happy Holiday</h1>
     </>
   )
 }

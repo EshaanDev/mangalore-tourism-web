@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import "./App.css";
-import Header from "./components/Header";
+import Beachinfo from './pages/BeachInfo';
 import Beaches from "./pages/Beaches";
 import Clubs from './pages/Clubs';
 import HomePage from './pages/HomePage';
@@ -14,7 +14,6 @@ import Restaurants from './pages/Restaurants';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
         {/* <Route path={window.location} element={<HomePage/>}/> */}
         <Route path='/' element={<HomePage/>}/>
@@ -26,6 +25,10 @@ function App() {
         <Route path='/live' element = {<LiveEvents/>}/>
         <Route path='/restaurants' element = {<Restaurants/>}/>
       </Routes>
+      <Routes>
+        <Route path='/beachinfo' element={<Beachinfo/>}/>
+      </Routes>
+
     </div>
   );
 }

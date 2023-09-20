@@ -1,16 +1,19 @@
+// import React from "react";
+import { signInWithPopup } from "firebase/auth";
+import { useEffect, useState } from "react";
 import React from "react";
 import { FaUmbrellaBeach } from "react-icons/fa";
-import { GiJugglingClubs, GiParkBench } from "react-icons/gi";
-import { IoMdRestaurant } from "react-icons/io";
-import { LuHotel } from "react-icons/lu";
-import { MdOutlineLiveTv, MdOutlineTempleHindu } from "react-icons/md";
+import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
+import { IoMdRestaurant } from 'react-icons/io';
+import { LuHotel } from 'react-icons/lu';
+import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { signInWithPopup } from "firebase/auth";
+import Logo from '../assets/icons/TourMyMangalore-logos_black.png';
 import { auth, provider } from "../config.js";
-import Logo from "../assets/icons/TourMyMangalore-logos_black.png";
-
 import "./comp-styles/Header.css";
+
+
+
 
 function Header() {
   const [signIn, setSignIn] = useState(false);
@@ -38,7 +41,7 @@ function Header() {
         const profilePic = data.user.photoURL;
         localStorage.setItem("profilePic", profilePic);
       })
-      .catch((err) => {});
+      .catch((err) => { });
   };
 
   return (
@@ -47,49 +50,49 @@ function Header() {
         <Link to="/">
           <img src={Logo} alt="" />
         </Link>
-        
+        <nav>
           <ul>
             <li>
-              <FaUmbrellaBeach className="hover-change-icon" />
+            <FaUmbrellaBeach className="hover-change-icon" />
               <Link to="/beach">
                 <p>Beaches</p>
               </Link>
             </li>
             <li>
-              <LuHotel className="hover-change-icon"/>
+              <LuHotel className="hover-change-icon" />
               <Link to="/hotels">
                 <p>Hotels</p>
               </Link>
             </li>
             <li>
-              <MdOutlineTempleHindu className="hover-change-icon"/>
+              <MdOutlineTempleHindu className="hover-change-icon" />
               <Link to="/religious">
                 <p>Religious Places</p>
               </Link>
             </li>
             <li>
-              <GiParkBench className="hover-change-icon"/>
+              <GiParkBench className="hover-change-icon" />
               <Link to="/parks">
                 {" "}
                 <p>Parks</p>
               </Link>
             </li>
             <li>
-              <IoMdRestaurant className="hover-change-icon"/>
+              <IoMdRestaurant className="hover-change-icon" />
               <Link to="/restaurants">
                 {" "}
                 <p>Restaurants</p>
               </Link>
             </li>
             <li>
-              <GiJugglingClubs className="hover-change-icon"/>
+              <GiJugglingClubs className="hover-change-icon" />
               <Link to="/clubs">
                 {" "}
                 <p>Clubs</p>
               </Link>
             </li>
             <li>
-              <MdOutlineLiveTv className="hover-change-icon"/>
+              <MdOutlineLiveTv className="hover-change-icon" />
               <Link to="/live">
                 {" "}
                 <span className="live">
@@ -98,7 +101,7 @@ function Header() {
               </Link>
             </li>
             <li>
-            {signIn ? (
+              {signIn ? (
                 <div onClick={userSignOut} className="user-div">
                   |
                   <img src={localStorage.getItem("profilePic")} alt="" />
@@ -109,8 +112,8 @@ function Header() {
               )}
             </li>
           </ul>
-      
-        
+        </nav>
+
       </header>
     </>
   );

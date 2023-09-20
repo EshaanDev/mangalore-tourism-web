@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
+
+.beach-img-section{
+    width: 86%;
+    height: 380px;
+    /* background-color: wheat; */
+    justify-content: center;
+    margin-left: 100px;
+    align-items: center;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+.beach-img1{
+    width: 40%;
+    height: 380px;  
+    /* position: relative; */
+    margin-right: 10px;
+}
+
+.beach-img2{
+    width: 40%;
+    height: 380px;  
+    /* position: relative; */
+    
+}
+
+.beach-img1 img{
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+}
+
+.beach-img2 img{
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+}
+
+.beach-info-section{
+    width: 86%;
+    position: relative;
+    /* background-color: wheat; */
+    /* justify-content: center; */
+    margin-left: 100px;
+    display: flex;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.description-div{
+    height: 500px;
+    width: 60%;
+    text-align: center;
+    background-color: lightpink;
+    border-right: 1px black solid;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.speciality-div{
+    height: 500px;
+    width: 40%;
+    text-align: center;
+    background-color: lightcoral;
+    border-left: 1px solid black;
+    border-radius: 15px;
+    margin-left: 5px;
+}
+
+.description-div p{
+    font-size: 1.2rem;
+    font-display: right;
+}
+
+.speciality-div p{
+    font-size: 1.2rem;
+    font-display: right;
+}
+
+.location-weather-section{
+    width: 86%;
+    position: relative;
+    /* background-color: wheat; */
+    /* justify-content: center; */
+    margin-left: 100px;
+    display: flex;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.location-div{
+    height: 200px;
+    width: 60%;
+    text-align: center;
+    background-color: lightyellow;
+    border-right: 1px black solid;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.weather-div{
+    height: 200px;
+    width: 40%;
+    text-align: center;
+    background-color: lightgrey;
+    border-left: 1px solid black;
+    border-radius: 15px;
+    margin-left: 5px;
+}
+
+.rating-review-section{
+    width: 86%;
+    position: relative;
+    /* background-color: wheat; */
+    /* justify-content: center; */
+    margin-left: 100px;
+    display: flex;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rating-div{
+    height: 150px;
+    width: 40%;
+    text-align: center;
+    background-color: white;
+    border-left: 1px solid black;
+   border-right: 1px solid black;
+    margin-left: 5px;
+    padding-top: 30px;
+    font-size: 1.2rem;
+}
+
+.review-div{
+    height: 180px;
+    width: 60%;
+    text-align: center;
+    background-color: white;
+    /* border-left: 1px solid black;*/
+   border-right: 1px solid black; 
+    margin-left: 5px;
+    /* padding-top: 30px; */
+    /* font-size: 0.6rem; */
+}
+
+.review-text-box{
+    height: 150px;
+    width: 40%;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    width: 98%;
+    height: 140px;
+    resize: none;
+    padding: 4px;
+}
+
+h2{
+    font-weight: bold;
+    padding-bottom: 2px;
+    font-size: 1.2rem;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.review-sbt-btn{
+    width: 120px;
+    height: 33px;
+    background-color: grey;
+    color: black;
+    font-family: 'poppins',sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+}
+
+.review-sbt-btn:hover{
+    width: 125px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.Review-List-Section{
+    width: 86%;
+    height: 500px;
+    position: relative;
+    /* background-color: wheat; */
+    /* justify-content: center; */
+    margin-left: 100px;
+    display: flex;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
