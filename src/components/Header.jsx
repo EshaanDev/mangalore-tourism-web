@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
 import { auth, provider } from "../config.js";
 import "./comp-styles/Header.css";
-
+ 
 
 
 

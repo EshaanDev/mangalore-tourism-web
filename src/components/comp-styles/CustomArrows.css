@@ -1,34 +1,44 @@
 /* Custom styles for the Previous Arrow */
-.slick-prev {
-  background-color: grey; /* Change the background color */
-  color: #fff; /* Change the text color */
+.custom-prev-arrow {
+  background-color: transparent; /* Change the background color */
+  color:white; /* Change the text color */
   border: none; /* Remove the border */
-  border-radius: 50%; /* Make it round */
-  width: 60px; /* Set the width */
-  height: 60px; /* Set the height */
+  border-radius: 80%; /* Make it round */
+  width: 30px; /* Set the width */
+  height: 27px; /* Set the height */
   font-size: 24px; /* Set the font size */
   position: absolute; /* Position it as needed */
-  top: 50%; /* Center vertically */
+  top: 45%; /* Center vertically */
   left: 10px; /* Adjust the left position */
   transform: translateY(-50%); /* Center vertically */
   cursor: pointer; /* Add a pointer cursor */
   z-index: 1;
 }
 
+.custom-prev-arrow:hover {
+  font-size: 35px;
+  height: 60px;
+}
+
 /* Custom styles for the Next Arrow */
-.slick-next {
-  background-color: grey; /* Change the background color */
-  color: #fff; /* Change the text color */
+.custom-next-arrow {
+  background-color: transparent; /* Change the background color */
+  color: white; /* Change the text color */
   border: none; /* Remove the border */
-  border-radius: 50%; /* Make it round */
-  width: 60px; /* Set the width */
-  height: 60px; /* Set the height */
+  border-radius: 80%; /* Make it round */
+  width: 30px; /* Set the width */
+  height: 27px; /* Set the height */
   font-size: 24px; /* Set the font size */
   position: absolute; /* Position it as needed */
-  top: 50%; /* Center vertically */
-  right: 20px; /* Adjust the right position */
+  top: 45%; /* Center vertically */
+  right: 90px; /* Adjust the right position */
   transform: translateY(-50%); /* Center vertically */
   cursor: pointer; /* Add a pointer cursor */
   z-index: 1;
+}
+
+.custom-next-arrow:hover {
+  font-size: 35px;
+  height: 60px;
 }
   

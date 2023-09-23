@@ -12,10 +12,14 @@
 }
 
 .recommended-for-you-section {
-  font-family: "Poppins";
-  width: 100%;
+  font-family: "Poppins", sans-serif;
+  width: 90%;
   padding: 40px 40px 40px 40px;
   margin-top: 40px;
+  /* background-color: lightcyan;
+  border-radius: 60px;
+  border: 1px solid darkcyan; */
+  margin-left: 70px;
     
 }
 
@@ -34,4 +38,13 @@ span .checked {
 .recommended-cards p {
   padding-left: 5px;
   font-size: 1rem;
+}
+
+.recommended-cards:hover img {
+  /* filter: blur(1px); */
+  opacity: 0.8;
+}
+
+.recommended-cards:hover p{
+  text-decoration: underline;
 }

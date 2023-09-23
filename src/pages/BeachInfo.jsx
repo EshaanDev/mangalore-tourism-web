@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/icons/TourMyMangaloreLogoOffi.svg';
+import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
 import beachImg from "../assets/images/beach-img.jpg";
 import ReviewForm from '../components/ReviewForm';
 import ReviewList from '../components/ReviewList';

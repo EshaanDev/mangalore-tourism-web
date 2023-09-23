@@ -15,11 +15,16 @@
  }
 
  .top-restaurants-section{
-    font-family: 'Poppins';
-    width: 100%;
+    font-family: 'Poppins',sans-serif;
+    width: 90%;
     padding: 40px 40px 40px 40px;
     /* display: inline-block;
      */
+     /* border-radius: 60px;
+     border: 1px solid blue;
+     background-color: lightblue; */
+     margin-top: 5px;
+     margin-left: 70px;
  }
 
  .restaurant-cards img{
@@ -37,4 +42,12 @@
  .restaurant-cards p{
    padding-left: 5px;
    font-size: 1rem;
+ }
+
+ .restaurant-cards:hover img{
+  opacity: 0.8;
+ }
+
+ .restaurant-cards:hover p{
+  text-decoration: underline;
  }

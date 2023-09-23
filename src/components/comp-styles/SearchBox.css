@@ -79,7 +79,7 @@
  border: none;
  border-radius: 50px 50px 50px 50px;
  background-color: lightgray;
- font-family: 'Poppins';
+ font-family: 'Poppins',sans-serif;
  cursor: pointer;
 }
 

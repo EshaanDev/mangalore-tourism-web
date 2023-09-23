@@ -1,12 +1,16 @@
 import React from 'react';
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
+import './comp-styles/CustomArrows.css';
 
 const PrevArrow = (props) => (
-  <button {...props} className="slick-arrow slick-prev">
-  </button>
+  <button className="custom-prev-arrow" onClick={props.onClick}>
+  <FaArrowCircleLeft/>
+</button>
 );
 
 const NextArrow = (props) => (
-  <button {...props} className="slick-arrow slick-next">
+  <button className="custom-next-arrow" onClick={props.onClick}>
+   <FaArrowCircleRight/>
   </button>
 );
 

@@ -31,10 +31,9 @@ function RecommendedForYou() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5 ,
-    slidesToScroll: 1,
-    prevArrow: <PrevArrow/>, // Use the custom PrevArrow component
-    nextArrow: <NextArrow />, // Use the custom NextArrow component
+    slidesToShow: 4 ,
+    slidesToScroll: 2,
+   
     responsive: [
       {
         breakpoint: 768,
@@ -51,7 +50,8 @@ function RecommendedForYou() {
         },
       },
     ],
-    
+    prevArrow: <PrevArrow/>, // Use the custom PrevArrow component
+    nextArrow: <NextArrow />, // Use the custom NextArrow component
   };
   
   return (
