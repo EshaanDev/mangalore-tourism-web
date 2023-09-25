@@ -1,6 +1,6 @@
 import React from "react";
-import "./comp-styles/InfoSection.css";
 import conceptImg from "../assets/images/mangalore-concept.png";
+import "./comp-styles/InfoSection.css";
 
 function InfoSection() {
   return (
@@ -16,9 +16,10 @@ function InfoSection() {
             facets of this vibrant destination. Our tourism website is your
             gateway to exploring this enchanting destination, where pristine
             beaches, lush greenery, delectable cuisine, and a tapestry of
-            traditions await. Welcome to Mangalore – where every moment is an
-            invitation to explore, discover, and enjoy.
+            traditions await.
           </p>
+          <p> Welcome to Mangalore – where every moment is an
+            invitation to explore, discover, and enjoy.</p>
         </div>
       </div>
     </>

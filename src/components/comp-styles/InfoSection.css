@@ -17,6 +17,7 @@
     border-radius: 20px;
     border-top: none;
     border:1px solid black;
+    overflow: hidden;
 }
 
 .info-section p{

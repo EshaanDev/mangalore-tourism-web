@@ -22,13 +22,15 @@
   }
 
   .beaches-section{
-    font-family: 'Poppins';
-    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
     padding: 40px 40px 40px 40px;
+    margin-left: 100px;
  }
 
  .beaches-cards p{
     padding-left: 5px;
+    text-decoration: none;
   }
 
 .top-line{
@@ -38,8 +40,7 @@
     position: relative;
     text-align: center;
     justify-content: center;
-    margin-left: 50px;
-    margin-right: 10px;
+    margin-left: 100px;
     /* background-color: antiquewhite; */
   }
 
@@ -55,3 +56,16 @@
   font-size: 1.2rem;
 
 }
+
+/* .beaches-cards:hover img{
+  opacity: 0.8;
+ } */
+
+ .beaches-cards:hover p{
+  text-decoration: underline;
+ }
+
+ .beaches-cards:hover {
+  transform: scale(1.1);
+  /* border: 2px solid black; */
+ }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaRegStar, FaStar } from "react-icons/fa";
-import hotelimg from "../assets/images/hotel1.jpg";
+import restaurantimg from "../assets/images/restaurant1.jpg";
 import Header from '../components/Header';
 import "../components/comp-styles/Restaurants.css";
 
@@ -12,7 +12,7 @@ function Restaurants() {
      <h4 className='top-line'>Our restaurant listings provide comprehensive details, including cuisine types, reviews, and reservation options, empowering you to savor unforgettable moments and indulge in the finest gastronomic delights during your travels.</h4>
     <section className="restaurants-section">
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -24,7 +24,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -36,7 +36,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -48,7 +48,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -60,7 +60,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -72,7 +72,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -84,7 +84,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -96,7 +96,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -108,7 +108,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>
@@ -120,7 +120,7 @@ function Restaurants() {
             </p>
           </div>
           <div className="restaurants-cards">
-            <img src={hotelimg} />
+            <img src={restaurantimg} />
             <p>Name Of the Beach</p>
             <p>Location</p>
             <p>

@@ -20,7 +20,8 @@
 
   .religiousplaces-section{
     font-family: 'Poppins';
-    width: 100%;
+    width: 90%;
+    margin-left: 100px;
     padding: 40px 40px 40px 40px;
  }
 
@@ -39,3 +40,16 @@
     margin-right: 10px;
     /* background-color: antiquewhite; */
   }
+
+  /* .religiousplaces-cards:hover img{
+    opacity: 0.8;
+   } */
+  
+   .religiousplaces-cards:hover p{
+    text-decoration: underline;
+   }
+
+   .religiousplaces-cards:hover {
+    transform: scale(1.1);
+    /* border: 2px solid black; */
+   }

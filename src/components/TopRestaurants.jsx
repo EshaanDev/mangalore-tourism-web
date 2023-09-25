@@ -4,7 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import hotelimg from "../assets/images/hotel1.jpg";
 import { NextArrow, PrevArrow } from "./CustomArrows";
-import './comp-styles/CustomArrow.css';
+import './comp-styles/CustomArrows.css';
 import "./comp-styles/TopRestaurants.css";
 
 function TopRestaurants() {
@@ -32,8 +32,8 @@ function TopRestaurants() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 768, // Adjust this breakpoint as needed

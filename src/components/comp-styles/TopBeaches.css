@@ -14,11 +14,16 @@
  }
 
  .top-beaches-section{
-    font-family: 'Poppins';
-    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    width: 90%;
     padding: 40px 40px 40px 40px;
     /* display: inline-block;
      */
+     /* background-color: lightgoldenrodyellow;
+     border-radius: 60px;
+     border: 1px solid greenyellow; */
+     margin-top: 5px;
+     margin-left: 70px;
  }
 
  .beach-cards img{
@@ -36,4 +41,12 @@
  .beach-cards p{
    padding-left: 5px;
    font-size: 1rem;
+ }
+
+ .beach-cards:hover img{
+  opacity: 0.8;
+ }
+
+ .beach-cards:hover p{
+  text-decoration: underline;
  }
