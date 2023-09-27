@@ -55,7 +55,7 @@
     background-color: lightpink;
     border-right: 1px black solid;
     border-radius: 15px;
-    text-align: center;
+    padding: 20px;
 }
 
 .speciality-div{
@@ -66,6 +66,7 @@
     border-left: 1px solid black;
     border-radius: 15px;
     margin-left: 5px;
+    padding: 20px;
 }
 
 .description-div p{
