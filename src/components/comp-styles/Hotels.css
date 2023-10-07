@@ -1,55 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
+.hotels-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  /* padding: 20px; */
+ 
+}
 
-.hotels-cards{
-    height: 350px;
-    width: 250px;
-    margin-top: 0;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    padding: 23px;
- }
+.hotels-cards img {
+  height: 250px;
+  width: 300px;
+  padding: 5px;
+  position: relative;
+}
 
- .hotels-cards img{
-    height: 250px;
-    width: 250px;
-    padding: 5px;
-    position: relative;
-  }
+.hotels-cards h6 {
+  padding-left: 5px;
+  color: rgb(101, 101, 101);
+  font-weight: 100;
+  text-align: justify;
+  padding-right: 3px;
+}
 
-  .hotels-section{
-    font-family: 'Poppins';
-    width: 90%;
-    margin-left: 100px;
-    padding: 40px 40px 40px 40px;
- }
+.top-line {
+  font-family: "Poppins", sans-serif;
+  /* font-size: small; */
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 10px;
+  /* background-color: antiquewhite; */
+}
 
- .hotels-cards p{
-    padding-left: 5px;
-  }
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  height: 400px;
+}
 
-.top-line{
-    font-family: 'Poppins', sans-serif;
-    /* font-size: small; */
-    font-weight: bold;
-    position: relative;
-    text-align: center;
-    justify-content: center;
-    margin-left: 50px;
-    margin-right: 10px;
-    /* background-color: antiquewhite; */
-  }
+.image-div{
+  height: 60%;
+  width: 100%;
+  position: relative;
+}
 
-  /* .hotels-cards:hover img{
-    opacity: 0.8;
-   } */
-  
-   .hotels-cards:hover p{
-    text-decoration: underline;
-   }
+.all-info{
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height:30%;
+  /* padding: 20px; */
+  text-align: left;
 
-   .hotels-cards:hover {
-    transform: scale(1.1);
-    /* border: 2px solid black; */
-   }
+}
+
+.all-info h4{
+  text-align: center;
+}

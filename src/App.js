@@ -9,16 +9,24 @@ import LiveEvents from './pages/LiveEvents';
 import Parks from './pages/Parks';
 import ReligiousPlaces from './pages/ReligiousPlaces';
 import Restaurants from './pages/Restaurants';
+import hotelsData from './hotels'
+import Header from './components/Header';
 
 
 function App() {
+   
+
+
+
+
   return (
     <div className="App">
+    
       <Routes>
         {/* <Route path={window.location} element={<HomePage/>}/> */}
         <Route path='/' element={<HomePage/>}/>
         <Route path="/beach" element={<Beaches/>}/>
-        <Route path='/hotels' element = {<Hotels/>}/>
+        <Route path='/hotels' element = {<Hotels className='hotels-menu'/>}/>
         <Route path='/clubs' element = {<Clubs/>}/>
         <Route path='/parks' element = {<Parks/>}/>
         <Route path='/religious' element = {<ReligiousPlaces/>}/>

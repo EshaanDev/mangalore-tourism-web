@@ -1,3 +1,5 @@
+
+
 // Import the functions you need from the SDKs you need
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
@@ -8,6 +10,7 @@ import { Firestore } from "firebase/firestore"; // Import firestore from firebas
 const firebaseConfig = {
   apiKey: "AIzaSyBI3MJFCxgyzj-W1Di_ohXAeB2tvE1iUos",
   authDomain: "mangalore-tourism-web.firebaseapp.com",
+  dataSource : "https://mangalore-tourism-web-default-rtdb.firebaseio.com/",
   projectId: "mangalore-tourism-web",
   storageBucket: "mangalore-tourism-web.appspot.com",
   messagingSenderId: "559646229187",
@@ -24,6 +27,4 @@ const analytics = getAnalytics(app);
 const db = new Firestore(); // Initialize firestore
 
 export { auth, db, provider };
-
-
 
