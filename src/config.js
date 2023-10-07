@@ -1,16 +1,16 @@
+
+
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import 'firebase/firestore'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { Firestore } from "firebase/firestore"; // Import firestore from firebase package
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBI3MJFCxgyzj-W1Di_ohXAeB2tvE1iUos",
   authDomain: "mangalore-tourism-web.firebaseapp.com",
+  dataSource : "https://mangalore-tourism-web-default-rtdb.firebaseio.com/",
   projectId: "mangalore-tourism-web",
   storageBucket: "mangalore-tourism-web.appspot.com",
   messagingSenderId: "559646229187",
@@ -18,11 +18,12 @@ const firebaseConfig = {
   measurementId: "G-QH34D9YLCE",
 };
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider(app);
+const provider = new GoogleAuthProvider();
 const analytics = getAnalytics(app);
-const db = firebase.firestore();
+const db = new Firestore(); // Initialize firestore
 
-export { auth, provider,db };
+export { auth, db, provider };
