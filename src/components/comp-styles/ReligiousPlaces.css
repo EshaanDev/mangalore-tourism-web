@@ -2,14 +2,23 @@
 
 
 .religiousplaces-cards{
-    height: 350px;
-    width: 250px;
-    margin-top: 0;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    padding: 23px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  height: 400px;
+ 
  }
+
+ .place-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+ 
+}
 
  .religiousplaces-cards img{
     height: 250px;
@@ -53,3 +62,24 @@
     transform: scale(1.1);
     /* border: 2px solid black; */
    }
+
+   .image-div{
+    height: 60%;
+    width: 100%;
+    position: relative;
+  }
+  
+  .all-info{
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height:30%;
+    /* padding: 20px; */
+    text-align: left;
+  
+  }
+  
+  .all-info h4{
+    text-align: center;
+  }
+  
