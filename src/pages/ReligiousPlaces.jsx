@@ -8,7 +8,7 @@ import religiousPlaces from "../religiousPlaces";
 function ReligiousPlaces() {
   const religiousPlace = religiousPlaces.map((data) => {
     return (
-      <div className="religiousplaces-cards">
+      <div className="religiousplaces-card">
         <div className="image-div">
           <img src={data.IMAGE} />
         </div>
@@ -29,7 +29,7 @@ function ReligiousPlaces() {
         sites, temples, mosques, and churches, each steeped in history and
         culture..
       </h4>
-      <div className="places-section">{religiousPlace}</div>
+      <div className="religiousplaces-cards">{religiousPlace}</div>
     
     </>
   );

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
 
-.religiousplaces-cards{
+.religiousplaces-card{
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -10,7 +10,7 @@
  
  }
 
- .place-section {
+ .religiousplaces-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -54,11 +54,11 @@
     opacity: 0.8;
    } */
   
-   .religiousplaces-cards:hover p{
+   .religiousplaces-card:hover p{
     text-decoration: underline;
    }
 
-   .religiousplaces-cards:hover {
+   .religiousplaces-card:hover {
     transform: scale(1.1);
     /* border: 2px solid black; */
    }
