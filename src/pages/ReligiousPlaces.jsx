@@ -3,7 +3,7 @@ import { GrLocation } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 import Header from "../components/Header";
 import "../components/comp-styles/ReligiousPlaces.css";
-import religiousPlaces from "../religiousPlaces";
+import religiousPlaces from "../religiousPlaces-collection";
 function ReligiousPlaces() {
   const religiousPlace = religiousPlaces.map((data) => {
     return (

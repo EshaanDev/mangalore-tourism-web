@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import { RiTwitterXFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 import '../components/comp-styles/Footer.css';
 
 function Footer() {
@@ -24,8 +25,8 @@ function Footer() {
             {/* <li><a href="/destinations">Destinations</a></li> */}
             {/* <li><a href="/tours">Tours</a></li> */}
             {/* <li><a href="/blog">Blog</a></li> */}
-            <li><a href="/about" className='footer-nav'>About Us</a></li>
-            <li><a href="/contact" className='footer-nav'>Contact</a></li>
+            <li><a href="/Aboutus" className='footer-nav'>About Us</a></li>
+            <Link><li className='footer-nav'>Contact</li></Link>
           </ul>
         </div>
         {/* <div className="footer-logo-div">

@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import "./App.css";
 import Footer from './components/Footer';
+import Aboutus from './pages/Aboutus';
 import Beachinfo from './pages/BeachInfo';
 import Beaches from "./pages/Beaches";
 import Clubs from './pages/Clubs';
@@ -36,6 +37,9 @@ function App() {
       <Routes>
         <Route path='/beachinfo' element={<Beachinfo/>}/>
         <Route path='/religiousplacesinfo' element={<Beachinfo/>}/>
+      </Routes>
+      <Routes>
+        <Route path='/aboutus' element={<Aboutus/>}/>
       </Routes>
 
     </div>

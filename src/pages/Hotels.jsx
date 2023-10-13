@@ -3,7 +3,7 @@ import { GrLocation } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 import Header from "../components/Header";
 import "../components/comp-styles/Hotels.css";
-import hotelsData from "../hotels";
+import hotelsData from "../hotels-collection";
 
 function Hotels() {
   const hotels = hotelsData.map((data) => {

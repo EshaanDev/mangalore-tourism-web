@@ -1,0 +1,36 @@
+.about-us-info{
+    height: 100%;
+    width: 70%;
+    background-color: wheat;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.about-us-logo{
+    /* height: 100px;
+    margin-right: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px; */
+    height: 100%;
+    width: 20%;
+    
+    border-top: none;
+    
+    overflow: hidden;
+    margin-top: 150px;
+    
+   
+
+}
+
+.about-us{
+    padding: 60px;
+    height: 550px;
+    /* background-color: rgba(206, 170, 103, 0.436); */
+    
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0px 0px 40px 40px;
+}
