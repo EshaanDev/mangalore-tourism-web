@@ -18,13 +18,14 @@
   position: relative;
 }
 
-.hotels-cards h6 {
+/* .hotels-cards h6 {
   padding-left: 5px;
   color: rgb(101, 101, 101);
   font-weight: 100;
   text-align: justify;
   padding-right: 3px;
-}
+  font-family: 'Poppins', sans-serif;
+} */
 
 .top-line {
   font-family: "Poppins", sans-serif;
@@ -59,9 +60,36 @@
   height:30%;
   /* padding: 20px; */
   text-align: left;
+  font-family: 'Poppins', sans-serif;
 
 }
 
-.all-info h4{
+.place-name{
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+}
+
+.hotel-card:hover{
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.place-location{
+  font-size: 13px;
+  color: grey;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.location-icon{
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
 }

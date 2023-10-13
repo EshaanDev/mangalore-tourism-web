@@ -133,7 +133,7 @@ const hotelsData = [
      IMAGE: "https:\/\/dynamic-media-cdn.tripadvisor.com\/media\/photo-o\/18\/0f\/38\/66\/oyo-23602-laxman-residency.jpg?w=700&h=-1&s=1"
     },
     {
-     NAME: "\nCosmo Lodge",
+     NAME: "Cosmo Lodge",
      DESCRIPTION: "COSMO LODGE offers rooms in Mangalore near Mangalore Central Station and Mangala Devi Temple. This 2-star hotel offers room service, a 24-hour front desk and free WiFi. The tour desk is available to assist guests in planning their days out.\n\nAt the hotel, the rooms are fitted with a wardrobe. At COSMO LODGE, all rooms are fitted with a flat-screen TV with cable channels.\n\nGokarnanatheshwara Temple is 3.4 km from the accommodation, while Kadri Manjunath Temple is 4.8 km away. The nearest airport is Mangalore International Airport, 13 km from COSMO LODGE.",
      SPECIALITY: "Free WiFi\nRoom service\nAir conditioning\n24-hour security\n24-hour front desk\nFree parking\nTour desk\nLaundry\nBarber\/beauty shop",
      LOCATION: "Telecom House Road PANDESHWAR, 575001 Mangalore",

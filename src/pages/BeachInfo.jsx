@@ -20,10 +20,11 @@ function BeachInfo() {
       <div className="beach-img1">
         <img src={beachImg} alt=''/>
       </div>
-      <div className="beach-img2">
+      {/* <div className="beach-img2">
         <img src={beachImg} alt=''/>
-      </div>
+      </div> */}
     </section>
+    <h2 className='main-name'>NAME OF THE PLACE</h2>
     <section className='beach-info-section'>
       <div className='description-div'>
         <h1>Description</h1>
@@ -47,7 +48,7 @@ function BeachInfo() {
         <h1>Location</h1>
         <p>Address: VRP8+P3F, Kasba Bengre, Mangaluru, Karnataka 575010
           Hours: 
-          Open ⋅ Closes 7 pm
+          Open ⋅ Closes 7   pm
           Phone: 080 2235 2828</p>
       </div>
     <div className="weather-div">
