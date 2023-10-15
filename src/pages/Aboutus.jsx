@@ -20,11 +20,11 @@ We pride ourselves on curating the most authentic and immersive experiences, fro
 
 Through our carefully crafted content, we aim to inspire and empower you to create memories that last a lifetime, whether you are embarking on a solo adventure, a family vacation, or a romantic getaway. Join us in unraveling the magic of Mangalore, where every street corner tells a story and every sunset paints a masterpiece.
 
-Thank you for choosing TourMyMangalore. Let's embark on this exhilarating journey together, exploring the vibrant colors and flavors that define this jewel of the South Indian coastline.
+Thank you for choosing TourMyMangalore. Let's embark on this exhilarating journey together, exploring the vibrant colors and flavors that define this jewel of the South Indian coastline. <br/>
 
-Happy exploring!
+<p className='happy'>Happy exploring!<br/></p>
 
-The TourMyMangalore Team
+<p className='team'>The TourMyMangalore Team</p>
 
 
     </div>

@@ -1,0 +1,32 @@
+.review-list-container {
+    margin-top: 5px;
+  }
+  
+  .review-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .review-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .review-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .review-comment {
+    margin-top: 5px;
+  }
+
+  .review-list-container h2{
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  

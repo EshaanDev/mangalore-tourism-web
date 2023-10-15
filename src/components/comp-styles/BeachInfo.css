@@ -189,12 +189,13 @@ h2{
     /* background-color: wheat; */
     /* justify-content: center; */
     margin-left: 100px;
-    display: flex;
+    
     margin-top: 40px;
     font-family: 'Poppins', sans-serif;
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
+    overflow: auto;
 }
 
 .Logo{
@@ -205,4 +206,28 @@ h2{
     text-align: center;
     padding-top: 10px;
 }
+
+.signIn-btn{
+    
+        height: 40px;
+        width: 70px;
+        background: #000;
+        color: white;
+        font-size: 1rem;
+        padding: 4px 4px 4px 4px;
+        border: 3px solid black;
+        border-radius: 5px;
+        /* margin-top: 5px; */
+       margin-right: 2px;
+       /* margin-left: 1350px; */
+       position: relative;
+       cursor: pointer;
+     
+      
+}
+
+/* header{
+    display: inline-block;
+    flex-direction: row;
+} */
   

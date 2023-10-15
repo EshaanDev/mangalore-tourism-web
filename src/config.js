@@ -4,7 +4,7 @@
 import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { Firestore } from "firebase/firestore"; // Import firestore from firebase package
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -24,7 +24,11 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 const analytics = getAnalytics(app);
-const db = new Firestore(); // Initialize firestore
+// const db = firebase.firestore();// Initialize firestore
+// databaseURL  :"https://mangalore-tourism-web-default-rtdb.firebaseio.com/" 
 
-export { auth, db, provider };
+const firestore = getFirestore(app); // Initialize Firestore
+
+export { auth, firestore, provider };
+
 

@@ -1,11 +1,27 @@
 import React from "react";
-import { FaRegStar, FaStar } from "react-icons/fa";
+import { GrLocation } from "react-icons/gr";
 import { Link } from "react-router-dom";
-import beachimg from "../assets/images/beach1.jpg";
+import beachData from '../beaches-collection.js';
 import Header from "../components/Header";
 import "../components/comp-styles/Beaches.css";
 
 function Beaches(props) {
+  const beaches = beachData.map((data) => {
+    return(
+      <Link to="/beachinfo">
+      <div className="beach-card">
+        <div className="image-div">
+        <img src={data.IMAGE} alt="Loading...please wait" />
+        </div>
+        <div className="all-info">
+        <h4 className="place-name">{data.NAME}</h4>
+        <h6 className="place-location"><GrLocation className="location-icon"/>{data.LOCATION}</h6>
+        </div>
+      </div>
+      </Link>
+    );
+  });
+  
   return (
     <>
       <Header />
@@ -15,20 +31,7 @@ function Beaches(props) {
         showcases an array of exquisite beach destinations, ensuring you'll find
         the ideal seaside escape for relaxation and adventure.
       </h4>
-      <section className="beaches-section">
-        <div className="beaches-cards">
-          <img src={beachimg} />
-          <p>{props.name}</p>
-          <p>{props.location}</p>
-          <p>
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaRegStar />
-          </p>
-        </div>
-      </section>
+      <div className="beaches-cards">{beaches}</div>
     </>
   );
 }
