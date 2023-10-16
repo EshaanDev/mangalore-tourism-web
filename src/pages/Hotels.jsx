@@ -1,20 +1,23 @@
 import React from "react";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 import "../components/comp-styles/Hotels.css";
 import hotelsData from "../hotels";
 
 function Hotels() {
   const hotels = hotelsData.map((data) => {
     return (
-      <div className="hotel-card">
-        <div className="image-div">
-        <img src={data.IMAGE} />
+      <Link to="/HotelInfo">
+        <div className="hotel-card">
+          <div className="image-div">
+            <img src={data.IMAGE} />
+          </div>
+          <div className="all-info">
+            <h4>{data.NAME}</h4>
+            <h6>{data.LOCATION}</h6>
+          </div>
         </div>
-        <div className="all-info">
-        <h4>{data.NAME}</h4>
-        <h6>{data.LOCATION}</h6>
-        </div>
-      </div>
+      </Link>
     );
   });
   return (

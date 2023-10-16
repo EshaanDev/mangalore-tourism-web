@@ -35,6 +35,8 @@ function App() {
       </Routes>
       <Routes>
         <Route path='/beachinfo' element={<Beachinfo/>}/>
+        <Route path='/HotelInfo' element={<Beachinfo/>}/>
+
       </Routes>
 
     </div>
