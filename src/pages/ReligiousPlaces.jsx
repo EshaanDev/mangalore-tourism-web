@@ -1,22 +1,23 @@
 import React from "react";
-import { FaRegStar, FaStar } from "react-icons/fa";
-import religiousimg from "../assets/images/temple1.jpg";
+import { GrLocation } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 import Header from "../components/Header";
 import "../components/comp-styles/ReligiousPlaces.css";
-import religiousPlaces from "../religiousPlaces";
-
+import religiousPlaces from "../religiousPlaces-collection";
 function ReligiousPlaces() {
   const religiousPlace = religiousPlaces.map((data) => {
     return (
+      <Link to="/religiousplacesinfo">
       <div className="religiousplaces-card">
         <div className="image-div">
-          <img src={data.IMAGE} />
+          <img src={data.IMAGE} alt="Loading.. Please wait" />
         </div>
         <div className="all-info">
-          <h4>{data.NAME}</h4>
-          <h6>{data.LOCATION}</h6>
+          <h4 className="place-name">{data.NAME}</h4>
+          <h6 className="place-location"><GrLocation className="location-icon"/>{data.LOCATION}</h6>
         </div>
       </div>
+      </Link>
     );
   });
   return (

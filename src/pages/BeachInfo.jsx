@@ -2,28 +2,38 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
 import beachImg from "../assets/images/beach-img.jpg";
-import ReviewForm from '../components/ReviewForm';
-import ReviewList from '../components/ReviewList';
-import StarRating from '../components/StarRating';
+// import ReviewForm from '../components/ReviewForm';
+// import ReviewList from '../components/ReviewList';
+// import StarRating from '../components/StarRating';
 import "../components/comp-styles/BeachInfo.css";
 import "../components/comp-styles/Header.css";
+import ReviewInfo from '../components/ReviewInfo';
+import SignIn from '../components/SignIn';
 
 function BeachInfo() {
+
+// const BeachInfo = () => {
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, []);
+  
   return (
     <>
     <header>
-    <Link to="/">
+      <Link to="/">
           <img className="Logo" src={Logo} alt="" />
-        </Link>
+      </Link>
+      <SignIn/>
     </header>
     <section className='beach-img-section'>
       <div className="beach-img1">
         <img src={beachImg} alt=''/>
       </div>
-      <div className="beach-img2">
+      {/* <div className="beach-img2">
         <img src={beachImg} alt=''/>
-      </div>
+      </div> */}
     </section>
+    <h2 className='main-name'>NAME OF THE PLACE</h2>
     <section className='beach-info-section'>
       <div className='description-div'>
         <h1>Description</h1>
@@ -47,7 +57,7 @@ function BeachInfo() {
         <h1>Location</h1>
         <p>Address: VRP8+P3F, Kasba Bengre, Mangaluru, Karnataka 575010
           Hours: 
-          Open ⋅ Closes 7 pm
+          Open ⋅ Closes 7   pm
           Phone: 080 2235 2828</p>
       </div>
     <div className="weather-div">
@@ -56,7 +66,7 @@ function BeachInfo() {
          There will be 14 days of rain with an average of 43.0mm rain on those days. Average cloud cover will be 84%</p>
     </div>
     </section>
-    <section className="rating-review-section">
+    {/* <section className="rating-review-section">
       <div className="rating-div">
         <StarRating initialRating={3} maxRating={5}/>
       </div>
@@ -66,9 +76,10 @@ function BeachInfo() {
      </section>
      <section className="Review-List-Section">
       <ReviewList/>
-     </section>
+     </section> */}
+     <ReviewInfo/>
     </>
   )
 }
 
-export default BeachInfo
+export default BeachInfo;

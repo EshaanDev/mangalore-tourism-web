@@ -1,0 +1,86 @@
+/* Footer container */
+.footer-container {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color */
+    padding: 20px 0; /* Add padding to top and bottom */
+  
+    /* Center the text in the footer */
+    text-align: center;
+  }
+  
+  /* Footer content wrapper */
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  /* Footer columns (Contact, Quick Links, Follow Us) */
+  .footer-column {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  /* Style for the links in the footer */
+  .footer-column a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    display: block;
+    margin-bottom: 5px;
+
+    transition: color 0.2s; /*Smooth color transition on hover*/
+  
+    /* Hover effect */
+    &:hover {
+      color: #e74c3c; /* Change color on hover */
+    }
+  }
+  
+  /* Style for social media icons */
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style for the horizontal line (hr) */
+  hr {
+    border: none;
+    border-top: 1px solid #555; /* Line color */
+    margin: 20px auto;
+  }
+  
+  /* Footer row at the bottom with copyright info */
+  .footer-row {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .footer-column {
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+  /* .footer_logo{
+    height: 40px;
+    background-color: transparent;
+  } */
+  
+ .footer-pri{
+  color: white;
+ }
+
+ .footer-nav{
+  color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+ }
