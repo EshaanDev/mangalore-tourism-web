@@ -70,16 +70,6 @@
   text-transform: uppercase;
 }
 
-<<<<<<< HEAD
-.hotel-card:hover p{
-  text-decoration: underline;
- }
-
- .hotel-card:hover {
-  transform: scale(1.1);
-  /* border: 2px solid black; */
- }
-=======
 .hotel-card:hover{
   transform: scale(1.1);
 }
@@ -103,4 +93,3 @@ a {
   vertical-align: middle;
   padding-right: 5px;
 }
->>>>>>> b7eee1f054e30b352b887e721915cc533e1a4c0b

@@ -6,6 +6,8 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBI3MJFCxgyzj-W1Di_ohXAeB2tvE1iUos",
@@ -24,11 +26,11 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 const analytics = getAnalytics(app);
-// const db = firebase.firestore();// Initialize firestore
+ //const db = getFirestore.db// Initialize firestore
 // databaseURL  :"https://mangalore-tourism-web-default-rtdb.firebaseio.com/" 
 
 const firestore = getFirestore(app); // Initialize Firestore
 
-export { auth, firestore, provider };
+export { auth,firestore, provider };
 
 

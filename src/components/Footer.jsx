@@ -25,7 +25,7 @@ function Footer() {
             {/* <li><a href="/destinations">Destinations</a></li> */}
             {/* <li><a href="/tours">Tours</a></li> */}
             {/* <li><a href="/blog">Blog</a></li> */}
-            <li><a href="/Aboutus" className='footer-nav'>About Us</a></li>
+            <li><Link to="/Aboutus" className='footer-nav'/>About Us</li>
             <Link><li className='footer-nav'>Contact</li></Link>
           </ul>
         </div>
