@@ -121,11 +121,13 @@ const ReviewInfo = () => {
       // Clear the input fields after submission
       setRating(3);
       setReview('');
-      setUserReviewExists(true); // Set user review status to true after submission
+      setUserReviewExists(true);
+      // window.location.reload(true) // Set user review status to true after submission
     } catch (error) {
       console.log('Error adding document: ', error);
       
     }
+    window.location.reload(true);
   };
 
   return (

@@ -1,12 +1,10 @@
-import React from "react";
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
 import { Link } from "react-router-dom";
-import beachData from "../beaches-collection.js";
 import Header from "../components/Header";
 import "../components/comp-styles/Beaches.css";
 import { firestore } from "../config";
-import { collection, getDocs } from "firebase/firestore";
-import { useState, useEffect } from "react";
 
 function Beaches(props) {
   const [data, setData] = useState([]);
