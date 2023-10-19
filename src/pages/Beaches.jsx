@@ -12,7 +12,7 @@ function Beaches(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const dataCollection = collection(firestore, "beach-data");
+        const dataCollection = collection(firestore, "beaches");
         const querySnapshot = await getDocs(dataCollection);
         const dataCollected = [];
         querySnapshot.forEach((doc) => {
