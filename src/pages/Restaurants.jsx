@@ -1,13 +1,10 @@
-import React from 'react';
-import { FaRegStar, FaStar } from "react-icons/fa";
-import restaurantimg from "../assets/images/restaurant1.jpg";
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from 'react';
 import { GrLocation } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import "../components/comp-styles/Restaurants.css";
-import { Link } from 'react-router-dom';
-import { useState,useEffect } from 'react';
 import { firestore } from "../config";
-import { collection, getDocs } from "firebase/firestore";
 
 function Restaurants() {
   const [data, setData] = useState([]);

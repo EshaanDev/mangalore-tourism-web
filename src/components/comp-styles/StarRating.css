@@ -10,18 +10,49 @@
 }
     */
 
-.star {
+/* .star {
   cursor: pointer;
   margin-right: 5px;
   font-size: 3rem;
 }
 
 .star.filled {
-  color: gold; /* Change this to your desired star color */
+  color: gold; Change this to your desired star color
 }
 
 .rating-text {
   margin-left: 10px;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
+} */
+
+.StarRating{
+  font-size: 70px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.warning{
+  color: red;
+  text-align: center;
+}
+
+.OK{
+  width: 80px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 730px;
+  font-family: 'poppins',sans-serif;
+  font-weight: bold;
+  background-color: lightgreen;
+  color: black;
+  border: none;
+  border-radius: 10px;
+}
+
+.OK:hover{
+ transform: scale(1.1);
 }
