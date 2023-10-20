@@ -1,5 +1,6 @@
 .review-list-container {
     margin-top: 5px;
+    overflow-x: hidden;
   }
   
   .review-list {
@@ -10,19 +11,25 @@
   }
   
   .review-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    width: 300px;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    width: 100%;
+    position: relative;
+    
+
+
   }
   
   .review-header {
     font-weight: bold;
     margin-bottom: 5px;
+
   }
   
   .review-comment {
     margin-top: 5px;
+    position: relative; 
+     overflow-wrap: break-word;
   }
 
   .review-list-container h2{
@@ -30,3 +37,6 @@
     padding-bottom: 10px;
   }
   
+  .review-list-container h2{
+    position: static;
+  }

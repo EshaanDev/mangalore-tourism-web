@@ -51,7 +51,7 @@ function Header() {
           <img className="Logo"  src={Logo} alt="" />
         </Link>
         <nav>
-          <ul>
+          <ul className="header-navs">
             <li>
             <FaUmbrellaBeach className="hover-change-icon" />
               <Link to="/beach">

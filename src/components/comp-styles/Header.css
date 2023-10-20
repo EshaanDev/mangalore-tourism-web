@@ -128,7 +128,7 @@ header h1 {
   color: black;
 }
 
-ul li:hover{
+.header-navs li:hover{
   /* color: white; */
   background-color: white;
   border-radius: 10px;

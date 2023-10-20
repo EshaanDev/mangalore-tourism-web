@@ -27,10 +27,37 @@
 } */
 
 .StarRating{
-  font-size: 70px;
+  font-size:70px;
   gap: 10px;
   padding: 10px;
 }
+
+
+/* .StarRating input[type='checkbox'] + span:before {
+  content: '\2713';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+/* Style the custom checkbox when checked */
+/* .StarRating input[type='checkbox']:checked + span:before {
+  background-color: orange;
+  color: #fff; */
+
+/* Adjust the styles based on your specific design requirements. This CSS will customize the appearance of the checkbox and its checkmark. */
+
+
+
+
+
+
 
 .warning{
   color: red;

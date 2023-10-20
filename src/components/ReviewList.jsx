@@ -28,7 +28,7 @@
 
   // export default ReviewList;
 
-  import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import '../components/comp-styles/ReviewList.css'; // Import your CSS file for styling
 import { firestore } from '../config'; // Import the Firestore instance

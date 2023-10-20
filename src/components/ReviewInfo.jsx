@@ -118,7 +118,7 @@ const ReviewInfo = () => {
   };
 
   const handleReviewSubmission = async () => {
-    if(!userEmail){
+    if (!userEmail) {
       setsignInMessage(true);
       // window.alert("Please sign in to Review.")
       return;
@@ -131,7 +131,7 @@ const ReviewInfo = () => {
         rating: rating.toString(),
         review: review.toString(),
         userEmail: userEmail,
-        date: new  Date()
+        date: new Date().toISOString(),
       });
 
       // Update userReview with the latest review
@@ -158,43 +158,44 @@ const ReviewInfo = () => {
             Rating
           </label> */}
           {userReviewExists ? (
-             <div>
-             {[...Array(5)].map((_, index) => {
-               const ratingValue = index + 1;
-               return (
-                 <label key={ratingValue} className='StarRating'>
-                   <input
-                     type="checkbox"
-                     value={ratingValue}
-                     checked={index < rating}
-                     onChange={() => {}}
-                     style={{ display: 'none' }}
-                   />
-                   <span style={{ color: 'orange' }}>&#9733;</span>
-                 </label>
-               );
-             })}
-           </div>
+              <div>
+                {[...Array(5)].map((_, index) => {
+                  const ratingValue = index + 1;
+                  return (
+                    <label key={ratingValue} className='StarRating'>
+                      <input
+                        type="checkbox"
+                        value={ratingValue}
+                        checked={ratingValue <= rating}
+                        onChange={() => { }}
+                        style={{ display : 'none' }}
+                        className='custom-checkbox'
+                      />
+                      <span style={{ color: (rating < ratingValue ) ? 'grey' : 'orange' }}>&#9733;</span>
+                    </label>
+                  );
+                })}
+              </div>
           ) : (
-           <div>
-            {[...Array(5)].map((_, index) => {
-              const ratingValue = index + 1;
-              return (
-                <label key={ratingValue} className='StarRating'>
-                  <input
-                    type="checkbox"
-                    value={ratingValue}
-                    checked={rating === ratingValue}
-                    onChange={() => handleRatingChange(ratingValue)}
-                    style={{ display: 'none' }}
-                  />
-                  <span style={{ color: rating >= ratingValue ? 'orange' : 'gray' }}>&#9733;</span>
-                </label>
-              );
-            })}
+            <div>
+              {[...Array(5)].map((_, index) => {
+                const ratingValue = index + 1;
+                return (
+                  <label key={ratingValue} className='StarRating'>
+                    <input
+                      type="checkbox"
+                      value={ratingValue}
+                      checked={rating === ratingValue}
+                      onChange={() => handleRatingChange(ratingValue)}
+                      style={{ display: 'none' }}
+                    />
+                    <span style={{ color: rating >= ratingValue ? 'orange' : 'gray' }}>&#9733;</span>
+                  </label>
+                );
+              })}
             </div>
           )}
-          </div>
+        </div>
         <div className="review-div">
           <h2>Write a Review</h2>
           {userReviewExists ? (
@@ -224,7 +225,7 @@ const ReviewInfo = () => {
           {/* {signInMessage && <><h1 className='warning'>Please Sign in to Review.</h1><span/><button className='OK' onClick={() => setsignInMessage(false)}>OK</button></>} */}
         </div>
       </section>
-      {signInMessage && <><h1 className='warning'>Please Sign in to Review.</h1><span/><button className='OK' onClick={() => setsignInMessage(false)}>OK</button></>}
+      {signInMessage && <><h1 className='warning'>Please Sign in to Review.</h1><span /><button className='OK' onClick={() => setsignInMessage(false)}>OK</button></>}
 
       <section className="Review-List-Section">
         <ReviewList />

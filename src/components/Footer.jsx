@@ -20,13 +20,10 @@ function Footer() {
 
         <div className="footer-column">
           <h4>Quick Links</h4>
-          <ul>
-            <li><a href="/" className='footer-nav'>Home</a></li>
-            {/* <li><a href="/destinations">Destinations</a></li> */}
-            {/* <li><a href="/tours">Tours</a></li> */}
-            {/* <li><a href="/blog">Blog</a></li> */}
-            <li><Link to="/Aboutus" className='footer-nav'/>About Us</li>
-            <Link><li className='footer-nav'>Contact</li></Link>
+          <ul className='footer-nav'>
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/Aboutus'><li>About Us</li></Link>
+            <Link to=''><li>Contact</li></Link>
           </ul>
         </div>
         {/* <div className="footer-logo-div">
