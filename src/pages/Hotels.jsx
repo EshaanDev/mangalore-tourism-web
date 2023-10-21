@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Header from "../components/Header";
-import firebase from "../config";
 import "../components/comp-styles/Hotels.css";
 
-import { firestore } from "../config";
 import { collection, getDocs } from "firebase/firestore";
+import { firestore } from "../config";
 
 function Hotels() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchHotels = async () => {
@@ -30,7 +29,20 @@ function Hotels() {
     fetchHotels();
   }, []);
 
-  const hotels = data.map((data) => {
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredHotels = data.filter((hotel) => {
+    return hotel.NAME && hotel.NAME.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const beachOptions = data.map((hotel) => (
+    <option key={hotel.id} value={hotel.NAME} />
+  ));
+  
+
+  const hotels = filteredHotels.map((data) => {
     return (
       <Link to="/HotelInfo">
         <div key={data.id} className="hotel-card">
@@ -52,7 +64,7 @@ function Hotels() {
     <>
       {" "}
       <Header />
-      <input type="search" className="search-each" id="" placeholder="Search" />
+      <input type="search" className="search-each" id="" placeholder="Search" value={searchTerm} onChange={handleSearch}/>
       <h4 className="top-line">
         Our comprehensive hotel listings provide in-depth information, including
         reviews, ratings, and exclusive deals, empowering you to make informed

@@ -8,6 +8,7 @@ import { firestore } from "../config";
 
 function Restaurants() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +27,20 @@ function Restaurants() {
 
     fetchData();
   }, []);
-  const beaches = data.map((data) => {
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredRestaurants = data.filter((restaurants) => {
+    return restaurants.NAME && restaurants.NAME.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const beachOptions = data.map((restaurants) => (
+    <option key={restaurants.id} value={restaurants.NAME} />
+  ));
+  
+  const beaches = filteredRestaurants.map((data) => {
     return (
       <Link to="/beachinfo">
         <div className="beach-card">
@@ -48,7 +62,7 @@ function Restaurants() {
   return (
     <>
       <Header />
-      <input type="search" className="search-each" id="" placeholder="Search" />
+      <input type="search" className="search-each" id="" placeholder="Search" value={searchTerm} onChange={handleSearch} />
       <h4 className="top-line">
         From secluded coves to vibrant coastal hubs, our tourism website
         showcases an array of exquisite beach destinations, ensuring you'll find

@@ -56,7 +56,7 @@ import { firestore } from '../config'; // Import the Firestore instance
   
     return (
       <div className="review-list-container">
-        <h2>Customer Reviews</h2>
+        <h2>Visitors Reviews</h2>
         <div className="review-list">
           {reviews.map((review) => (
             <div key={review.id} className="review-item">

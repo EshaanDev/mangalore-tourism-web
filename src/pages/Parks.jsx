@@ -1,15 +1,15 @@
-import React from "react";
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Parks.css";
-import { useState,useEffect } from "react";
 import { firestore } from "../config";
-import { collection, getDocs } from "firebase/firestore";
 
 
 function Parks() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchData = async () => {
@@ -31,8 +31,21 @@ function Parks() {
 
     fetchData();
   }, []);
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredParks = data.filter((park) => {
+    return park.NAME && park.NAME.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const beachOptions = data.map((park) => (
+    <option key={park.id} value={park.NAME} />
+  ));
   
-  const parks = data.map((data) => {
+  
+  const parks = filteredParks.map((data) => {
     return (
       <Link to="/beachinfo">
         <div className="park-card">
@@ -53,7 +66,7 @@ function Parks() {
   return (
     <>
       <Header />
-      <input type="search" className="search-each" id="" placeholder="Search" />
+      <input type="search" className="search-each" id="" placeholder="Search" value={searchTerm} onChange={handleSearch} />
       <h4 className="top-line">
         Our tourism website offers a detailed directory of parks, encompassing
         serene city green spaces and breathtaking natural reserves, catering to

@@ -1,16 +1,14 @@
-import React from 'react';
-import { FaRegStar, FaStar } from "react-icons/fa";
-import clubimg from "../assets/images/club1.jpeg";
-import Header from '../components/Header';
-import { Link } from 'react-router-dom';
-import { GrLocation } from 'react-icons/gr';
-import "../components/comp-styles/Clubs.css";
-import { useState,useEffect } from 'react';
-import { firestore } from "../config";
 import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from 'react';
+import { GrLocation } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import "../components/comp-styles/Clubs.css";
+import { firestore } from "../config";
 
 function Clubs() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchData = async () => {
@@ -29,10 +27,23 @@ function Clubs() {
 
     fetchData();
   }, []);
-  const beaches = data.map((data) => {
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredClubs = data.filter((club) => {
+    return club.NAME && club.NAME.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const clubOptions = data.map((club) => (
+    <option key={club.id} value={club.NAME} />
+  ));
+
+  const clubs = filteredClubs.map((data) => {
     return (
       <Link to="/beachinfo">
-        <div className="beach-card">
+        <div className="club-card">
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />
           </div>
@@ -51,13 +62,13 @@ function Clubs() {
   return (
     <>
       <Header />
-      <input type="search" className="search-each" id="" placeholder="Search" />
+      <input type="search" className="search-each" id="" placeholder="Search" value={searchTerm} onChange={handleSearch} />
       <h4 className="top-line">
         From secluded coves to vibrant coastal hubs, our tourism website
         showcases an array of exquisite beach destinations, ensuring you'll find
         the ideal seaside escape for relaxation and adventure.
       </h4>
-      <div className="beaches-cards">{beaches}</div>
+      <div className="clubs-cards">{clubs}</div>
     </>
   );
 }

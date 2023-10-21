@@ -1,16 +1,15 @@
-import React from "react";
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/ReligiousPlaces.css";
-import religiousPlaces from "../religiousPlaces-collection";
-import { useState,useEffect } from "react";
 import { firestore } from "../config";
-import { collection, getDocs } from "firebase/firestore";
 
 
 function ReligiousPlaces() {
   const [data, setData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchHotels = async () => {
@@ -30,7 +29,20 @@ function ReligiousPlaces() {
     fetchHotels();
   }, []);
 
-  const religiousPlace = data.map((data) => {
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredPlaces = data.filter((place) => {
+    return place.NAME && place.NAME.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+
+  const beachOptions = data.map((place) => (
+    <option key={place.id} value={place.NAME} />
+  ));
+  
+
+  const religiousPlace = filteredPlaces.map((data) => {
     return (
       <Link to="/religiousplacesinfo">
         <div key={data.id} className="religiousplaces-card">
@@ -51,7 +63,7 @@ function ReligiousPlaces() {
   return (
     <>
       <Header />
-      <input type="search" className="search-each" id="" placeholder="Search" />
+      <input type="search" className="search-each" id="" placeholder="Search" value={searchTerm} onChange={handleSearch} />
       <h4 className="top-line">
         Delve into a spiritual journey like never before with our meticulously
         curated list of religious places, showcasing a diverse array of sacred
