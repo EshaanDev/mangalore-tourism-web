@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
 .search-section {
- overflow: hidden;
- position: relative;
+  overflow: hidden;
+  position: relative;
 }
-.img-holder:hover{
+.img-holder:hover {
   transform: scale(1.1);
-
 }
-.img-holder{
+.img-holder {
   width: 100%;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.753),
@@ -29,16 +28,16 @@
   align-items: center;
   background-position: center;
   background-size: cover;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
-   }
+    opacity: 1;
+  }
 }
 
 .search-section h2 {
@@ -55,8 +54,10 @@
 
 .input-wrapper {
   display: flex;
+  gap: 20px;
+  flex-direction: column;
   align-items: center;
-  height: 2rem;
+  height: 40px;
   background-color: white;
   width: 650px;
   padding: 16px;
@@ -65,8 +66,11 @@
 }
 
 .input-wrapper input {
-  background-color: transparent;    
-  border: 1px solid white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   font-size: 1.2rem;
@@ -74,15 +78,14 @@
   padding: 5px;
 }
 
-.input-wrapper button{
+.input-wrapper button {
   width: 150px;
- border: none;
- border-radius: 50px 50px 50px 50px;
- background-color: lightgray;
- font-family: 'Poppins',sans-serif;
- cursor: pointer;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  background-color: lightgray;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
-
 
 .input-wrapper input:focus {
   outline: none;
@@ -91,3 +94,30 @@
 .search-section button {
   height: 65px;
 }
+
+.searchResults {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  
+  z-index: -1;
+  margin-left: 0;
+  background-color: white;
+  width: 650px;
+  padding: 30px;
+  padding-right: 0;
+  border-radius: 50px 50px 50px 50px;
+}
+
+
+.searchResults img{
+  height: 40px;
+  width: 40px;
+}
+
+.results{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+

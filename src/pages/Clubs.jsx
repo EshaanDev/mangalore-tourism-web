@@ -1,14 +1,14 @@
 import { collection, getDocs } from "firebase/firestore";
-import React, { useEffect, useState } from 'react';
-import { GrLocation } from 'react-icons/gr';
-import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+import React, { useEffect, useState } from "react";
+import { GrLocation } from "react-icons/gr";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 import "../components/comp-styles/Clubs.css";
 import { firestore } from "../config";
 
 function Clubs() {
   const [data, setData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +33,9 @@ function Clubs() {
   };
 
   const filteredClubs = data.filter((club) => {
-    return club.NAME && club.NAME.toLowerCase().includes(searchTerm.toLowerCase());
+    return (
+      club.NAME && club.NAME.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   });
 
   const clubOptions = data.map((club) => (
@@ -62,7 +64,14 @@ function Clubs() {
   return (
     <>
       <Header />
-      <input type="search" className="search-each" id="" placeholder="Search" value={searchTerm} onChange={handleSearch} />
+      <input
+        type="search"
+        className="search-each"
+        id=""
+        placeholder="Search"
+        value={searchTerm}
+        onChange={handleSearch}
+      />
       <h4 className="top-line">
         From secluded coves to vibrant coastal hubs, our tourism website
         showcases an array of exquisite beach destinations, ensuring you'll find
@@ -73,4 +82,4 @@ function Clubs() {
   );
 }
 
-export default Clubs
+export default Clubs;

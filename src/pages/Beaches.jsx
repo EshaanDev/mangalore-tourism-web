@@ -139,7 +139,9 @@ function Beaches(props) {
         an array of exquisite beach destinations, ensuring you'll find the ideal
         seaside escape for relaxation and adventure.
       </h4>
-      <div className="beaches-cards">{beaches}</div>
+      <div className="beaches-cards" onClick={() => {
+      
+      }}>{beaches}</div>
     </>
   );
 }
