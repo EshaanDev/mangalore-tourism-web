@@ -16,7 +16,7 @@ header {
 }
 
 .hover-change-icon:hover{
-  color: white;
+  color: black;
 }
 
 header img {
@@ -128,12 +128,14 @@ header h1 {
   color: black;
 }
 
-.header-navs li:hover{
+.header-navs p:hover{
   /* color: white; */
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
   text-decoration: underline;
+  /* color: antiquewhite; */
+  transform: scale(1.1);
 }
 
 .Logo{

@@ -44,7 +44,7 @@ function Clubs() {
 
   const clubs = filteredClubs.map((data) => {
     return (
-      <Link to="/beachinfo">
+      <Link to={`/beachinfo/${data.id}`}>
         <div className="club-card">
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />

@@ -28,7 +28,7 @@ function App() {
           <Route path="/restaurants" element={<Restaurants />} />
         </Routes>
         <Routes>
-          <Route path="/beachinfo:id" element={<Beachinfo />} />
+          <Route path="beachinfo/:id" element={<Beachinfo />} />
           <Route path="/HotelInfo" element={<Beachinfo />} />
           <Route path="/religiousplacesinfo" element={<Beachinfo />} />
         </Routes>
