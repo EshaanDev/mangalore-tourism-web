@@ -132,6 +132,7 @@ const ReviewInfo = () => {
         review: review.toString(),
         userEmail: userEmail,
         date: new Date().toISOString(),
+        place:""
       });
 
       // Update userReview with the latest review
