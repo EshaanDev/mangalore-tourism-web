@@ -238,7 +238,7 @@ function Beaches(props) {
   const handleBeachClick = (id) => {
     const selectedBeach = data.find((beach) => beach.id === id);
     if(selectedBeach) {
-    navigate(`/beachinfo/${id}`, { state: { beachData: selectedBeach } });
+    navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
     }
   };
 
