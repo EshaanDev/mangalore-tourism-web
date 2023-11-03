@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
 import beachImg from "../assets/images/beach-img.jpg";
@@ -9,13 +9,11 @@ import "../components/comp-styles/BeachInfo.css";
 import "../components/comp-styles/Header.css";
 import ReviewInfo from '../components/ReviewInfo';
 import SignIn from '../components/SignIn';
+import { useParams } from 'react-router-dom';
 
-function BeachInfo() {
-
-// const BeachInfo = () => {
-//   useEffect(() => {
-//     window.scrollTo(0, 0);
-//   }, []);
+function BeachInfo(props) {
+   const [dataInfo,setDataInfo] = useState([])
+  let {id} = useParams
   
   return (
     <>
