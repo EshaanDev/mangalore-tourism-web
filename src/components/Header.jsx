@@ -7,7 +7,7 @@ import { IoMdRestaurant } from 'react-icons/io';
 import { LuHotel } from 'react-icons/lu';
 import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
 import { Link } from "react-router-dom";
-import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
+import Logo from '../assets/icons/TourMyMangalore-logos_black.png';
 import SignIn from "./SignIn";
 // import { auth, provider } from "../config.js";
 // import "./comp-styles/Header.css";
@@ -16,34 +16,7 @@ import SignIn from "./SignIn";
 
 
 function Header() {
-  // const [signIn, setSignIn] = useState(false);
-  // const [signOut, setSignOut] = useState(false);
-
-  // useEffect(() => {
-  //   auth.onAuthStateChanged((user) => {
-  //     if (user) {
-  //       setSignIn(!signIn);
-  //       setSignOut(!signOut);
-  //     } else {
-  //     }
-  //   });
-  // }, []);
-
-  // const userSignOut = () => {
-  //   auth.signOut();
-  //   // alert("Logged out, Please refresh the page");
-  //   window.location.reload(false);
-  // };
-
-  // const GoogleSignIn = () => {
-  //   signInWithPopup(auth, provider)
-  //     .then((data) => {
-  //       const profilePic = data.user.photoURL;
-  //       localStorage.setItem("profilePic", profilePic);
-  //     })
-  //     .catch((err) => { });
-  // };
-
+ 
   return (
     <>
       <header>

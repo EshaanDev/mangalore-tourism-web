@@ -18,11 +18,11 @@
 // //   }, []);
 
 // const location = useLocation();
-// const beachData = location.state ? location.state.beachData : null;
+// const clubData = location.state ? location.state.clubData : null;
 
-// console.log("beachData : ", beachData)
+// console.log("clubData : ", clubData)
 
-// if(!beachData){
+// if(!clubData){
 //   console.log("No data")
 //   return<div>No data</div>
 // }
@@ -36,27 +36,27 @@
 //     </header>
 //     <section className='beach-img-section'>
 //       <div className="beach-img1">
-//         <img src={beachData.IMAGE} alt=''/>
+//         <img src={clubData.IMAGE} alt=''/>
 //       </div>
 //       {/* <div className="beach-img2">
 //         <img src={beachImg} alt=''/>
 //       </div> */}
 //     </section>
-//     <h2 className='main-name'>{beachData.NAME}</h2>
+//     <h2 className='main-name'>{clubData.NAME}</h2>
 //     <section className='beach-info-section'>
 //       <div className='description-div'>
 //         <h1>Description</h1>
-//         <p>{beachData.DESCRIPTION}</p>
+//         <p>{clubData.DESCRIPTION}</p>
 //       </div>
 //       <div className="speciality-div">
 //         <h1>Speciality</h1>
-//         <p>{beachData.SPECIALITY}</p>
+//         <p>{clubData.SPECIALITY}</p>
 //       </div>
 //     </section>
 //     <section className="location-weather-section">
 //     <div className="location-div">
 //         <h1>Location</h1>
-//         <p>{beachData.LOCATION}</p>
+//         <p>{clubData.LOCATION}</p>
 //       </div>
 //     <div className="weather-div">
 //       <h1>Weather</h1>
@@ -93,11 +93,11 @@
 
 // function BeachInfo(props) {
   // const location = useLocation();
-  // const beachData = location.state ? location.state.beachData : null;
+  // const clubData = location.state ? location.state.clubData : null;
 
-  // console.log("beachData : ", beachData);
+  // console.log("clubData : ", clubData);
 
-  // if (!beachData) {
+  // if (!clubData) {
   //   console.log("No data");
   //   return <div>No data</div>;
   // }
@@ -112,31 +112,31 @@
   //     </header>
   //     <section className='beach-img-section'>
   //       <div className="beach-img1">
-  //         <img src={beachData.IMAGE} alt='' />
+  //         <img src={clubData.IMAGE} alt='' />
   //       </div>
   //     </section>
-  //     <h2 className='main-name'>{beachData.NAME}</h2>
+  //     <h2 className='main-name'>{clubData.NAME}</h2>
   //     <section className='beach-info-section'>
   //       <div className='description-div'>
   //         <h1>Description</h1>
-  //         <p>{beachData.DESCRIPTION}</p>
+  //         <p>{clubData.DESCRIPTION}</p>
   //       </div>
   //       <div className="speciality-div">
   //         <h1>Speciality</h1>
-  //         <p>{beachData.SPECIALITY}</p>
+  //         <p>{clubData.SPECIALITY}</p>
   //       </div>
   //     </section>
   //     <section className="location-weather-section">
   //       <div className="location-div">
   //         <h1>Location</h1>
-  //         <p>{beachData.LOCATION}</p>
+  //         <p>{clubData.LOCATION}</p>
   //       </div>
   //       <div className="weather-div">
   //         <h1>Weather</h1>
   //         <p>28° There will be 14 days of rain with an average of 43.0mm rain on those days. Average cloud cover will be 84%</p>
   //       </div>
   //     </section>
-  //     <ReviewInfo beachData={beachData} />
+  //     <ReviewInfo clubData={clubData} />
   //   </>
   // );
 // }
@@ -157,10 +157,10 @@ import { collection } from "firebase/firestore";
 
 function BeachInfo() {
   const location = useLocation();
-  const beachData = location.state ? location.state.beachData : null;
+  const clubData = location.state ? location.state.clubData : null;
 
 
-  if (!beachData) {
+  if (!clubData) {
     console.log("No data");
     return <div>No data</div>;
   }
@@ -169,8 +169,8 @@ function BeachInfo() {
     //   <>
     //     {/* <Header /> */}
     //     <div>
-    //       <h2>{beachData.NAME}</h2>
-    //       <p>{beachData.DESCRIPTION}</p>
+    //       <h2>{clubData.NAME}</h2>
+    //       <p>{clubData.DESCRIPTION}</p>
     //       {/* Add other beach information fields here */}
     //     </div>
     //   </>
@@ -185,31 +185,31 @@ function BeachInfo() {
         </header>
         <section className='beach-img-section'>
           <div className="beach-img1">
-            <img src={beachData.IMAGE} alt='' />
+            <img src={clubData.IMAGE} alt='' />
           </div>
         </section>
-        <h2 className='main-name'>{beachData.NAME}</h2>
+        <h2 className='main-name'>{clubData.NAME}</h2>
         <section className='beach-info-section'>
           <div className='description-div'>
             <h1>Description</h1>
-            <p>{beachData.DESCRIPTION}</p>
+            <p>{clubData.DESCRIPTION}</p>
           </div>
           <div className="speciality-div">
             <h1>Speciality</h1>
-            <p>{beachData.SPECIALITY}</p>
+            <p>{clubData.SPECIALITY}</p>
           </div>
         </section>
         <section className="location-weather-section">
           <div className="location-div">
             <h1>Location</h1>
-            <p>{beachData.LOCATION}</p>
+            <p>{clubData.LOCATION}</p>
           </div>
           <div className="weather-div">
             <h1>Weather</h1>
             <p>28° There will be 14 days of rain with an average of 43.0mm rain on those days. Average cloud cover will be 84%</p>
           </div>
         </section>
-        <ReviewInfo beachData={beachData} />
+        <ReviewInfo clubData={clubData} />
       </>
     );
   }

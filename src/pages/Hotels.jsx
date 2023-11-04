@@ -3,13 +3,14 @@ import { GrLocation } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Hotels.css";
-
+import { useNavigate } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "../config";
 
 function Hotels() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
+  const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchHotels = async () => {
@@ -41,11 +42,25 @@ function Hotels() {
     <option key={hotel.id} value={hotel.NAME} />
   ));
   
+  const handleBeachClick = (id) => {
+    const selectedBeach = data.find((beach) => beach.id === id);
+    if (selectedBeach) {
+      navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
+    }
+  };
+  
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
 
   const hotels = filteredHotels.map((data) => {
     return (
-      <Link to="/HotelInfo">
-        <div key={data.id} className="hotel-card">
+     
+        <div key={data.id} className="hotel-card" onClick={() => {handleClick(data.id)}}>
           <div className="image-div">
             <img src={data.IMAGE} />
           </div>
@@ -57,7 +72,7 @@ function Hotels() {
             </h6>
           </div>
         </div>
-      </Link>
+     
     );
   });
   return (

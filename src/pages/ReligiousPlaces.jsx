@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/ReligiousPlaces.css";
 import { firestore } from "../config";
+import { useNavigate } from "react-router-dom";
 
 
 function ReligiousPlaces() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
-  // const dataRef = firebase.firestore().collection('hotels')
+  const navigate = useNavigate()  // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchHotels = async () => {
       try {
@@ -40,12 +41,22 @@ function ReligiousPlaces() {
   const beachOptions = data.map((place) => (
     <option key={place.id} value={place.NAME} />
   ));
+
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
   
 
   const religiousPlace = filteredPlaces.map((data) => {
     return (
-      <Link to="/religiousplacesinfo">
-        <div key={data.id} className="religiousplaces-card">
+     
+        <div key={data.id} className="religiousplaces-card" onClick={() => {
+          handleClick(data.id)
+        }}>
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading.. Please wait" />
           </div>
@@ -57,7 +68,7 @@ function ReligiousPlaces() {
             </h6>
           </div>
         </div>
-      </Link>
+   
     );
   });
   return (

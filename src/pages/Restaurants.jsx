@@ -6,11 +6,13 @@ import Header from "../components/Header";
 import "../components/comp-styles/Restaurants.css";
 import { firestore } from "../config";
 import Spinner from ".././assets/icons/Spinner-1.2s-200px.svg";
+import { useNavigate } from "react-router-dom";
 
 function Restaurants() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
 
   useEffect(() => {
@@ -47,10 +49,18 @@ function Restaurants() {
     <option key={restaurants.id} value={restaurants.NAME} />
   ));
 
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
+
   const beaches = filteredRestaurants.map((data) => {
     return (
-      <Link to="/beachinfo">
-        <div className="beach-card">
+     
+        <div className="beach-card" onClick={() => {handleClick(data.id)}}>
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />
           </div>
@@ -62,7 +72,7 @@ function Restaurants() {
             </h6>
           </div>
         </div>
-      </Link>
+     
     );
   });
 

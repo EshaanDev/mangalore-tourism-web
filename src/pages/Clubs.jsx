@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Clubs.css";
 import { firestore } from "../config";
+import { useNavigate } from "react-router-dom";
 
 function Clubs() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  // const dataRef = firebase.firestore().collection('hotels')
+  const navigate = useNavigate();
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -38,26 +40,30 @@ function Clubs() {
     );
   });
 
-  const clubOptions = data.map((club) => (
-    <option key={club.id} value={club.NAME} />
-  ));
+
+
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
 
   const clubs = filteredClubs.map((data) => {
     return (
-      <Link to={`/beachinfo/${data.id}`}>
-        <div className="club-card">
-          <div className="image-div">
-            <img src={data.IMAGE} alt="Loading...please wait" />
-          </div>
-          <div className="all-info">
-            <h4 className="place-name">{data.NAME}</h4>
-            <h6 className="place-location">
-              <GrLocation className="location-icon" />
-              {data.ADDRESS}
-            </h6>
-          </div>
+      <div className="club-card"  onClick={() => handleClick(data.id)}>
+        <div className="image-div">
+          <img src={data.IMAGE} alt="Loading...please wait" />
         </div>
-      </Link>
+        <div className="all-info">
+          <h4 className="place-name">{data.NAME}</h4>
+          <h6 className="place-location">
+            <GrLocation className="location-icon" />
+            {data.ADDRESS}
+          </h6>
+        </div>
+      </div>
     );
   });
 
@@ -72,6 +78,7 @@ function Clubs() {
         value={searchTerm}
         onChange={handleSearch}
       />
+      
       <h4 className="top-line">
         From secluded coves to vibrant coastal hubs, our tourism website
         showcases an array of exquisite beach destinations, ensuring you'll find

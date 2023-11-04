@@ -3,6 +3,11 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Aboutus from "./pages/Aboutus";
 import Beachinfo from "./pages/BeachInfo";
+import ClubInfo from "./pages/ClubInfo"
+import ParkInfo from './pages/ParkInfo'
+import ReligiousInfo from './pages/ReligiousInfo'
+import HotelInfo from './pages/HotelInfo'
+import RestaurantsInfo from './pages/RestaurantsInfo'
 import Beaches from "./pages/Beaches";
 import Clubs from "./pages/Clubs";
 import HomePage from "./pages/HomePage";
@@ -29,8 +34,11 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/beachinfo" element={<Beachinfo />} />
-          <Route path="/HotelInfo" element={<Beachinfo />} />
-          <Route path="/religiousplacesinfo" element={<Beachinfo />} />
+          <Route path="/clubInfo" element={<ClubInfo />} />
+          <Route path="/HotelInfo" element={<HotelInfo />} />
+          <Route path="/RestaurantInfo" element={<RestaurantsInfo />} />
+          <Route path="/religiousplacesinfo" element={<ReligiousInfo />} />
+          <Route path="/parkInfo" element={<ParkInfo />} />
         </Routes>
         <Routes>
           <Route path="/AboutUs" element={<Aboutus />} />

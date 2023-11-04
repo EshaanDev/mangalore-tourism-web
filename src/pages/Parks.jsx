@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Parks.css";
 import { firestore } from "../config";
+import { useNavigate } from "react-router-dom";
 
 
 function Parks() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
+  const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchData = async () => {
@@ -43,12 +45,20 @@ function Parks() {
   const beachOptions = data.map((park) => (
     <option key={park.id} value={park.NAME} />
   ));
+
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
   
   
   const parks = filteredParks.map((data) => {
     return (
-      <Link to="/beachinfo">
-        <div className="park-card">
+     
+        <div className="park-card" onClick={() => {handleClick(data.id)}}>
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />
           </div>
@@ -60,7 +70,7 @@ function Parks() {
             </h6>
           </div>
         </div>
-      </Link>
+      
     );
   });
   return (
