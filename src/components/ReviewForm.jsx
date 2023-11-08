@@ -26,7 +26,7 @@ function ReviewForm() {
     return (
         <div>
             <h2>Write a Review</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method='POST'>
                 <textarea className='review-text-box'
                     placeholder="Write your review here..."
                     value={review}

@@ -39,7 +39,7 @@ import { firestore } from '../config'; // Import the Firestore instance
     useEffect(() => {
       const fetchReviews = async () => {
         try {
-          const reviewsCollection = collection(firestore, 'reviews');
+          const reviewsCollection = collection(firestore, 'beaches/${data.id}/reviews');
           const querySnapshot = await getDocs(reviewsCollection);
           const reviewData = [];
           querySnapshot.forEach((doc) => {

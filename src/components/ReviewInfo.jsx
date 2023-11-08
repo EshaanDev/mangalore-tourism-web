@@ -1,61 +1,4 @@
-// import { collection, doc, setDoc } from 'firebase/firestore';
-// import React, { useState } from 'react';
-// import ReviewList from '../components/ReviewList';
-// import StarRating from '../components/StarRating';
-// import { firestore } from '../config'; // Import the Firestore instance
 
-// const ReviewInfo = () => {
-//   const [rating, setRating] = useState(3); // default rating
-//   const [review, setReview] = useState('');
-
-//   const handleRatingChange = (newRating) => {
-//     setRating(newRating);
-//   };
-
-//   const handleReviewChange = (event) => {
-//     setReview(event.target.value);
-//   };
-
-//   const handleReviewSubmission = async () => {
-//     try {
-//       // Push the review data to the Firestore collection
-//       const reviewsCollection = collection(firestore, 'reviews');
-//       await setDoc(doc(reviewsCollection), {
-//         rating: rating.toString(),
-//         review: review.toString(),
-//       });
-
-//       // Clear the input fields after submission
-//       // setRating(3);
-//       // setReview('');
-//     } catch (error) {
-//       console.log('Error adding document: ', error);
-//     }
-//   };
-
-
-//   return (
-//     <>
-//       <section className="rating-review-section">
-//         <div className="rating-div">
-//           <StarRating initialRating={rating} maxRating={5} onRatingChange={handleRatingChange} />
-//         </div>
-//         <div className="review-div">
-//           <p>Write a Review</p>
-//           <textarea value={review} onChange={handleReviewChange} placeholder="Enter your review..." className="review-text-box" />
-//           <button onClick={handleReviewSubmission} className="review-sbt-btn">
-//             Submit Review
-//           </button>
-//         </div>
-//       </section>
-//       <section className="Review-List-Section">
-//         <ReviewList />
-//       </section>
-//     </>
-//   );
-// };
-
-// export default ReviewInfo;
 
 import { collection, doc, getDocs, query, setDoc, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
@@ -64,7 +7,7 @@ import '../components/comp-styles/StarRating.css';
 import { auth, firestore } from '../config'; // Import the Firestore instance
 
 
-const ReviewInfo = () => {
+const ReviewInfo = (props) => {
   const [rating, setRating] = useState(3); // default rating
   const [review, setReview] = useState('');
   const [userEmail, setUserEmail] = useState('');
@@ -126,7 +69,7 @@ const ReviewInfo = () => {
 
     try {
       // Push the review data to the Firestore collection
-      const reviewsCollection = collection(firestore, 'reviews');
+      const reviewsCollection = collection(firestore, 'beaches/${data.id}/reviews');
       await setDoc(doc(reviewsCollection), {
         rating: rating.toString(),
         review: review.toString(),
