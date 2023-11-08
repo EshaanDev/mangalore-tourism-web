@@ -208,7 +208,7 @@ const ReviewInfo = ({ beachData }) => {
   useEffect(() => {
     const fetchUserReview = async () => {
       const reviewsCollection = collection(firestore, 'reviews');
-      const q = query(reviewsCollection, where('userEmail', '==', userEmail), where('place', '==', beachData.id));
+      const q = query(reviewsCollection, where('userEmail', '==', userEmail), where('id', '==', beachData.id));
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
         querySnapshot.forEach((doc) => {
@@ -250,7 +250,8 @@ const ReviewInfo = ({ beachData }) => {
         review: review.toString(),
         userEmail: userEmail,
         date: new Date().toISOString(),
-        place: beachData.id,
+        place: beachData.NAME,
+        place_id: beachData.id,
       });
 
       setUserReview(review);
