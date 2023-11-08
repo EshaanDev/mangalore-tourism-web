@@ -7,7 +7,7 @@ import { IoMdRestaurant } from 'react-icons/io';
 import { LuHotel } from 'react-icons/lu';
 import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
 import { Link } from "react-router-dom";
-import Logo from '../assets/icons/TourMyMangalore-logos_black.png';
+import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
 import SignIn from "./SignIn";
 // import { auth, provider } from "../config.js";
 // import "./comp-styles/Header.css";

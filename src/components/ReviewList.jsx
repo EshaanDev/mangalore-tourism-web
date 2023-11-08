@@ -40,7 +40,7 @@ import { firestore } from '../config'; // Import the Firestore instance
       const fetchReviews = async () => {
         try {
           const reviewsCollection = collection(firestore, 'reviews');
-          const q = query(reviewsCollection, where('place','==',beachData.id))
+          const q = query(reviewsCollection, where('place','==',beachData.NAME))
           const querySnapshot = await getDocs(q);
           const reviewData = [];
           querySnapshot.forEach((doc) => {
