@@ -1,15 +1,15 @@
+import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Hotels.css";
-
-import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "../config";
 
-function Hotels() {
+function Hotels(props) {
   const [data, setData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchHotels = async () => {
@@ -40,26 +40,35 @@ function Hotels() {
   const beachOptions = data.map((hotel) => (
     <option key={hotel.id} value={hotel.NAME} />
   ));
+
+  const handleHotelClick = (id) => {
+    const selectedHotel = data.find((data) => data.id === id);
+    if(selectedHotel) {
+    navigate(`/beachinfo`, { state: { beachData: selectedHotel } });
+    }
+  };
   
 
-  const hotels = filteredHotels.map((data) => {
-    return (
-      <Link to="/HotelInfo">
-        <div key={data.id} className="hotel-card">
-          <div className="image-div">
-            <img src={data.IMAGE} />
-          </div>
-          <div className="all-info">
-            <h4 className="place_name">{data.NAME}</h4>
-            <h6 className="place-location">
-              <GrLocation className="location-icon" />
-              {data.LOCATION}
-            </h6>
-          </div>
-        </div>
-      </Link>
-    );
-  });
+
+const hotels = filteredHotels.map((data) => (
+  // <Link to="/HotelInfo" key={data.id}> {/* Un-comment the Link component and add the key attribute */}
+    <div className="hotel-card" onClick={() => handleHotelClick(data.id)}> {/* Fix the syntax of handleHotelClick and use data.id */}
+      <div className="image-div">
+        <img src={data.IMAGE} alt={data.NAME} /> {/* Add an alt attribute to the image */}
+      </div>
+      <div className="all-info">
+        <h4 className="place_name">{data.NAME}</h4>
+        <h6 className="place-location">
+          <GrLocation className="location-icon" />
+          {data.LOCATION}
+        </h6>
+      </div>
+    </div>
+  // </Link>
+));
+
+// Ensure that you render the 'hotels' array somewhere in your component's JSX.
+
   return (
     <>
       {" "}

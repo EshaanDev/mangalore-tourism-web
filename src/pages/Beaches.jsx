@@ -195,7 +195,7 @@
 import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Beaches.css";
 import { firestore } from "../config";
@@ -243,7 +243,7 @@ function Beaches(props) {
   };
 
   const beaches = filteredBeaches.map((beach) => (
-    <Link to={`/beachinfo/${beach.id}`} key={beach.id}>
+    // <Link to={`/beachinfo/${beach.id}`} key={beach.id}>
       <div className="beach-card" onClick={() => handleBeachClick(beach.id)}>
         <div className="image-div">
           <img src={beach.IMAGE} alt="Loading...please wait" />
@@ -256,7 +256,7 @@ function Beaches(props) {
           </h6>
         </div>
       </div>
-    </Link>
+    // </Link>
   ));
 
   return (

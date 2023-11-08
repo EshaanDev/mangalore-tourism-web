@@ -1,15 +1,16 @@
 import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Parks.css";
 import { firestore } from "../config";
 
 
-function Parks() {
+function Parks(props) {
   const [data, setData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchData = async () => {
@@ -44,11 +45,18 @@ function Parks() {
     <option key={park.id} value={park.NAME} />
   ));
   
+
+  const handleParkClick = (id) => {
+    const selectedPark = data.find((beach) => beach.id === id);
+    if(selectedPark) {
+    navigate(`/beachinfo`, { state: { beachData: selectedPark } });
+    }
+  };
   
   const parks = filteredParks.map((data) => {
     return (
-      <Link to="/beachinfo">
-        <div className="park-card">
+      // <Link to="/beachinfo">
+        <div className="park-card" onClick={() => handleParkClick(data.id)}>
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />
           </div>
@@ -60,7 +68,7 @@ function Parks() {
             </h6>
           </div>
         </div>
-      </Link>
+      // </Link>
     );
   });
   return (

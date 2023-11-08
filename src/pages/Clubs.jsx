@@ -1,14 +1,15 @@
 import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Clubs.css";
 import { firestore } from "../config";
 
-function Clubs() {
+function Clubs(props) {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
     const fetchData = async () => {
@@ -42,10 +43,17 @@ function Clubs() {
     <option key={club.id} value={club.NAME} />
   ));
 
+  const handleClubClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if(selectedClub) {
+    navigate(`/beachinfo`, { state: { beachData: selectedClub } });
+    }
+  };
+
   const clubs = filteredClubs.map((data) => {
     return (
-      <Link to={`/beachinfo/${data.id}`}>
-        <div className="club-card">
+      // <Link to={`/beachinfo/${data.id}`}>
+        <div className="club-card" onClick={() => handleClubClick(data.id)}>
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />
           </div>
@@ -57,7 +65,7 @@ function Clubs() {
             </h6>
           </div>
         </div>
-      </Link>
+      // </Link>
     );
   });
 

@@ -28,19 +28,20 @@
 
   // export default ReviewList;
 
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import '../components/comp-styles/ReviewList.css'; // Import your CSS file for styling
 import { firestore } from '../config'; // Import the Firestore instance
   
-  function ReviewList() {
+  function ReviewList({beachData}) {
     const [reviews, setReviews] = useState([]);
   
     useEffect(() => {
       const fetchReviews = async () => {
         try {
           const reviewsCollection = collection(firestore, 'reviews');
-          const querySnapshot = await getDocs(reviewsCollection);
+          const q = query(reviewsCollection, where('place','==',beachData.id))
+          const querySnapshot = await getDocs(q);
           const reviewData = [];
           querySnapshot.forEach((doc) => {
             reviewData.push({ id: doc.id, ...doc.data() });
