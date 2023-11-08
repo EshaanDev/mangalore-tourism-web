@@ -1,12 +1,11 @@
 import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Restaurants.css";
 import { firestore } from "../config";
-import Spinner from ".././assets/icons/Spinner-1.2s-200px.svg";
-import { useNavigate } from "react-router-dom";
+
 
 function Restaurants() {
   const [data, setData] = useState([]);
@@ -49,18 +48,18 @@ function Restaurants() {
     <option key={restaurants.id} value={restaurants.NAME} />
   ));
 
-  const handleClick = (id) => {
-    const selectedClub = data.find((club) => club.id === id);
-    if (selectedClub) {
-      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+
+  const handleRestaurantClick = (id) => {
+    const selectedRestaurant = data.find((beach) => beach.id === id);
+    if(selectedRestaurant) {
+    navigate(`/beachinfo`, { state: { beachData: selectedRestaurant } });
     }
   };
 
-
   const beaches = filteredRestaurants.map((data) => {
     return (
-     
-        <div className="beach-card" onClick={() => {handleClick(data.id)}}>
+      // <Link to="/beachinfo">
+        <div className="beach-card" onClick={() => handleRestaurantClick(data.id)}>
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />
           </div>
@@ -72,7 +71,9 @@ function Restaurants() {
             </h6>
           </div>
         </div>
-     
+
+      // </Link>
+
     );
   });
 

@@ -189,7 +189,7 @@
 import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { GrLocation } from "react-icons/gr";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import "../components/comp-styles/Beaches.css";
 import { firestore } from "../config";
@@ -237,19 +237,37 @@ function Beaches(props) {
   };
 
   const beaches = filteredBeaches.map((beach) => (
-    <div className="beach-card"  onClick={() => handleBeachClick(beach.id)}>
-      <div className="image-div">
-        <img src={beach.IMAGE} alt="Loading...please wait" />
+
+    // <Link to={`/beachinfo/${beach.id}`} key={beach.id}>
+      <div className="beach-card" onClick={() => handleBeachClick(beach.id)}>
+        <div className="image-div">
+          <img src={beach.IMAGE} alt="Loading...please wait" />
+        </div>
+        <div className="all-info">
+          <h4 className="place-name">{beach.NAME}</h4>
+          <h6 className="place-location">
+            <GrLocation className="location-icon" />
+            {beach.LOCATION}
+          </h6>
+        </div>
       </div>
-      <div className="all-info">
-        <h4 className="place-name">{beach.NAME}</h4>
-        <h6 className="place-location">
-          <GrLocation className="location-icon" />
-          {beach.LOCATION}
-        </h6>
-      </div>
-    </div>
   ));
+    // </Link>
+// =======
+//     <div className="beach-card"  onClick={() => handleBeachClick(beach.id)}>
+//       <div className="image-div">
+//         <img src={beach.IMAGE} alt="Loading...please wait" />
+//       </div>
+//       <div className="all-info">
+//         <h4 className="place-name">{beach.NAME}</h4>
+//         <h6 className="place-location">
+//           <GrLocation className="location-icon" />
+//           {beach.LOCATION}
+//         </h6>
+//       </div>
+//     </div>
+// >>>>>>> 604072787ad6645d713e2515a4d9d0dcfc104e79
+//   ));
 
   return (
     <>
