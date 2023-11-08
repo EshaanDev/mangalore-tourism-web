@@ -10,7 +10,9 @@ function Clubs(props) {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+
   // const dataRef = firebase.firestore().collection('hotels')
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -39,9 +41,15 @@ function Clubs(props) {
     );
   });
 
-  const clubOptions = data.map((club) => (
-    <option key={club.id} value={club.NAME} />
-  ));
+
+
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
 
   const handleClubClick = (id) => {
     const selectedClub = data.find((club) => club.id === id);
@@ -66,6 +74,20 @@ function Clubs(props) {
           </div>
         </div>
       // </Link>
+// =======
+//       <div className="club-card"  onClick={() => handleClick(data.id)}>
+//         <div className="image-div">
+//           <img src={data.IMAGE} alt="Loading...please wait" />
+//         </div>
+//         <div className="all-info">
+//           <h4 className="place-name">{data.NAME}</h4>
+//           <h6 className="place-location">
+//             <GrLocation className="location-icon" />
+//             {data.ADDRESS}
+//           </h6>
+//         </div>
+//       </div>
+// >>>>>>> 604072787ad6645d713e2515a4d9d0dcfc104e79
     );
   });
 
@@ -80,6 +102,7 @@ function Clubs(props) {
         value={searchTerm}
         onChange={handleSearch}
       />
+      
       <h4 className="top-line">
         From secluded coves to vibrant coastal hubs, our tourism website
         showcases an array of exquisite beach destinations, ensuring you'll find

@@ -10,9 +10,11 @@ import { firestore } from "../config";
 function ReligiousPlaces() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
+
   const navigate = useNavigate();
 
   // const dataRef = firebase.firestore().collection('hotels')
+
   useEffect(() => {
     const fetchHotels = async () => {
       try {
@@ -42,6 +44,14 @@ function ReligiousPlaces() {
   const beachOptions = data.map((place) => (
     <option key={place.id} value={place.NAME} />
   ));
+
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
   
   const handleRelPlacesClick = (id) => {
     const selectedPlace = data.find((beach) => beach.id === id);
@@ -52,8 +62,10 @@ function ReligiousPlaces() {
 
   const religiousPlace = filteredPlaces.map((data) => {
     return (
+
       // <Link to="/religiousplacesinfo">
         <div key={data.id} className="religiousplaces-card" onClick={() => handleRelPlacesClick(data.id)}>
+{/* */}
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading.. Please wait" />
           </div>
@@ -65,7 +77,9 @@ function ReligiousPlaces() {
             </h6>
           </div>
         </div>
+
       // </Link>
+
     );
   });
   return (

@@ -8,7 +8,11 @@ import { firestore } from "../config";
 
 function Hotels(props) {
   const [data, setData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+// <<<<<<< HEAD
+//   const [searchTerm, setSearchTerm] = useState("");
+// =======
+  const [searchTerm, setSearchTerm] = useState("")
+
   const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
@@ -48,7 +52,22 @@ function Hotels(props) {
     }
   };
   
+  const handleBeachClick = (id) => {
+    const selectedBeach = data.find((beach) => beach.id === id);
+    if (selectedBeach) {
+      navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
+    }
+  };
+  
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
 
+
+// <<<<<<< HEAD
 
 const hotels = filteredHotels.map((data) => (
   // <Link to="/HotelInfo" key={data.id}> {/* Un-comment the Link component and add the key attribute */}
@@ -69,6 +88,26 @@ const hotels = filteredHotels.map((data) => (
 
 // Ensure that you render the 'hotels' array somewhere in your component's JSX.
 
+// =======
+//   const hotels = filteredHotels.map((data) => {
+//     return (
+     
+//         <div key={data.id} className="hotel-card" onClick={() => {handleClick(data.id)}}>
+//           <div className="image-div">
+//             <img src={data.IMAGE} />
+//           </div>
+//           <div className="all-info">
+//             <h4 className="place_name">{data.NAME}</h4>
+//             <h6 className="place-location">
+//               <GrLocation className="location-icon" />
+//               {data.LOCATION}
+//             </h6>
+//           </div>
+//         </div>
+     
+//     );
+//   });
+//  604072787ad6645d713e2515a4d9d0dcfc104e79
   return (
     <>
       {" "}

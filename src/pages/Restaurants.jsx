@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import "../components/comp-styles/Restaurants.css";
 import { firestore } from "../config";
 
+
 function Restaurants() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -47,6 +48,7 @@ function Restaurants() {
     <option key={restaurants.id} value={restaurants.NAME} />
   ));
 
+
   const handleRestaurantClick = (id) => {
     const selectedRestaurant = data.find((beach) => beach.id === id);
     if(selectedRestaurant) {
@@ -69,7 +71,9 @@ function Restaurants() {
             </h6>
           </div>
         </div>
+
       // </Link>
+
     );
   });
 

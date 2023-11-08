@@ -1,6 +1,3 @@
-
-
-
 // // import { collection, getDocs } from "firebase/firestore";
 // // import React, { useEffect, useState } from "react";
 // // import { GrLocation } from "react-icons/gr";
@@ -42,7 +39,6 @@
 //   // const beachOptions = data.map((beach) => (
 //   //   <option key={beach.id} value={beach.NAME} />
 //   // ));
-  
 
 // //   const beaches = filteredBeaches.map((beach) => (
 // //     <Link to="/beachinfo" key={beach.id}>
@@ -72,14 +68,14 @@
 // //         value={searchTerm}
 // //         onChange={handleSearch}
 // //       />
-// //       <datalist id="beach-list">{beachOptions}</datalist> 
+// //       <datalist id="beach-list">{beachOptions}</datalist>
 // //       <h4 className="top-line">
 // //         From secluded coves to vibrant coastal hubs, our tourism website showcases
 // //         an array of exquisite beach destinations, ensuring you'll find the ideal
 // //         seaside escape for relaxation and adventure.
 // //       </h4>
 // //       <div className="beaches-cards" onClick={() => {
-      
+
 // //       }}>{beaches}</div>
 // //     </>
 // //   );
@@ -95,7 +91,6 @@
 // import Header from "../components/Header";
 // import "../components/comp-styles/Beaches.css";
 // import { firestore } from "../config";
-
 
 // function Beaches(props) {
 //   // existing code...
@@ -120,7 +115,6 @@
 
 //     fetchData();
 //   }, []);
-
 
 //   const handleSearch = (event) => {
 //     setSearchTerm(event.target.value);
@@ -164,7 +158,7 @@
 //   ));
 
 //   // rest of the code...
-  
+
 //   return (
 //     <>
 //       <Header />
@@ -176,14 +170,14 @@
 //         value={searchTerm}
 //         onChange={handleSearch}
 //       />
-//       <datalist id="beach-list">{beachOptions}</datalist> 
+//       <datalist id="beach-list">{beachOptions}</datalist>
 //       <h4 className="top-line">
 //         From secluded coves to vibrant coastal hubs, our tourism website showcases
 //         an array of exquisite beach destinations, ensuring you'll find the ideal
 //         seaside escape for relaxation and adventure.
 //       </h4>
 //       <div className="beaches-cards" onClick={() => {
-      
+
 //       }}>{beaches}</div>
 //     </>
 //   );
@@ -228,21 +222,22 @@ function Beaches(props) {
   };
 
   const filteredBeaches = data.filter((beach) => {
-    return beach.NAME && beach.NAME.toLowerCase().includes(searchTerm.toLowerCase());
+    return (
+      beach.NAME && beach.NAME.toLowerCase().includes(searchTerm.toLowerCase())
+    );
   });
 
-  const beachOptions = data.map((beach) => (
-    <option key={beach.id} value={beach.NAME} />
-  ));
+  
 
   const handleBeachClick = (id) => {
     const selectedBeach = data.find((beach) => beach.id === id);
-    if(selectedBeach) {
-    navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
+    if (selectedBeach) {
+      navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
     }
   };
 
   const beaches = filteredBeaches.map((beach) => (
+
     // <Link to={`/beachinfo/${beach.id}`} key={beach.id}>
       <div className="beach-card" onClick={() => handleBeachClick(beach.id)}>
         <div className="image-div">
@@ -256,8 +251,23 @@ function Beaches(props) {
           </h6>
         </div>
       </div>
-    // </Link>
   ));
+    // </Link>
+// =======
+//     <div className="beach-card"  onClick={() => handleBeachClick(beach.id)}>
+//       <div className="image-div">
+//         <img src={beach.IMAGE} alt="Loading...please wait" />
+//       </div>
+//       <div className="all-info">
+//         <h4 className="place-name">{beach.NAME}</h4>
+//         <h6 className="place-location">
+//           <GrLocation className="location-icon" />
+//           {beach.LOCATION}
+//         </h6>
+//       </div>
+//     </div>
+// >>>>>>> 604072787ad6645d713e2515a4d9d0dcfc104e79
+//   ));
 
   return (
     <>
@@ -270,9 +280,11 @@ function Beaches(props) {
         value={searchTerm}
         onChange={handleSearch}
       />
-      <datalist id="beach-list">{beachOptions}</datalist>
+      {/* <datalist id="beach-list">{beachOptions}</datalist> */}
       <h4 className="top-line">
-        From secluded coves to vibrant coastal hubs, our tourism website showcases an array of exquisite beach destinations, ensuring you'll find the ideal seaside escape for relaxation and adventure.
+        From secluded coves to vibrant coastal hubs, our tourism website
+        showcases an array of exquisite beach destinations, ensuring you'll find
+        the ideal seaside escape for relaxation and adventure.
       </h4>
       <div className="beaches-cards">{beaches}</div>
     </>
@@ -280,4 +292,3 @@ function Beaches(props) {
 }
 
 export default Beaches;
-

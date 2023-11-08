@@ -9,7 +9,9 @@ import { firestore } from "../config";
 
 function Parks(props) {
   const [data, setData] = useState([]);
+
   const [searchTerm, setSearchTerm] = useState("");
+
   const navigate = useNavigate();
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
@@ -44,6 +46,14 @@ function Parks(props) {
   const beachOptions = data.map((park) => (
     <option key={park.id} value={park.NAME} />
   ));
+
+  const handleClick = (id) => {
+    const selectedClub = data.find((club) => club.id === id);
+    if (selectedClub) {
+      navigate(`/clubInfo`, { state: { clubData: selectedClub } });
+    }
+  };
+
   
 
   const handleParkClick = (id) => {
@@ -55,8 +65,10 @@ function Parks(props) {
   
   const parks = filteredParks.map((data) => {
     return (
+
       // <Link to="/beachinfo">
         <div className="park-card" onClick={() => handleParkClick(data.id)}>
+
           <div className="image-div">
             <img src={data.IMAGE} alt="Loading...please wait" />
           </div>
@@ -68,7 +80,9 @@ function Parks(props) {
             </h6>
           </div>
         </div>
+
       // </Link>
+
     );
   });
   return (
