@@ -86,7 +86,7 @@ const ReviewInfo = ({beachData}) => {
   useEffect(() => {
     const fetchUserReview = async () => {
       const reviewsCollection = collection(firestore, 'reviews');
-      const q = query(reviewsCollection, where('userEmail', '==', userEmail), where('id', '==', beachData.id));
+      const q = query(reviewsCollection, where('userEmail', '==', userEmail), where('place_id', '==', beachData.id));
       const querySnapshot = await getDocs(q);
       if (!querySnapshot.empty) {
         querySnapshot.forEach((doc) => {
@@ -222,7 +222,7 @@ const ReviewInfo = ({beachData}) => {
       )}
 
       <section className="Review-List-Section">
-        <ReviewList beachID={beachData.id} />
+        <ReviewList beachData={beachData} />
       </section>
     </>
   );

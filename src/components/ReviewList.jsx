@@ -39,6 +39,7 @@ import { firestore } from '../config'; // Import the Firestore instance
     useEffect(() => {
       const fetchReviews = async () => {
         try {
+          if (beachData && beachData.NAME){
           const reviewsCollection = collection(firestore, 'reviews');
           const q = query(reviewsCollection, where('place','==',beachData.NAME))
           const querySnapshot = await getDocs(q);
@@ -46,14 +47,17 @@ import { firestore } from '../config'; // Import the Firestore instance
           querySnapshot.forEach((doc) => {
             reviewData.push({ id: doc.id, ...doc.data() });
           });
+          console.log('fetched data ', reviewData)
           setReviews(reviewData);
+        }
         } catch (error) {
           console.error('Error fetching reviews:', error);
         }
       };
-  
+      
+      console.log('place name',beachData && beachData.NAME)
       fetchReviews();
-    }, []);
+    }, [beachData]);
   
     return (
       <div className="review-list-container">
