@@ -1,13 +1,16 @@
-import React from "react";
+import { collection, getDocs } from "firebase/firestore";
+import React, { useEffect, useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import hotelimg from "../assets/images/hotel1.jpg";
+import { firestore } from "../config";
 import { NextArrow, PrevArrow } from "./CustomArrows";
 import './comp-styles/CustomArrows.css';
 import "./comp-styles/RecommendedForYou.css";
 
-
 function RecommendedForYou() {
+  const [data, setData] = useState([]);
+  const navigate = useNavigate();
   // const responsive = {
   //   superLargeDesktop: {
   //     // the naming can be any, depends on you.
@@ -53,6 +56,31 @@ function RecommendedForYou() {
     prevArrow: <PrevArrow/>, // Use the custom PrevArrow component
     nextArrow: <NextArrow />, // Use the custom NextArrow component
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const dataCollection = collection(firestore, "hotels");
+        const querySnapshot = await getDocs(dataCollection);
+        const dataCollected = [];
+        querySnapshot.forEach((doc) => {
+          dataCollected.push({ id: doc.id, ...doc.data() });
+        });
+        setData(dataCollected.slice(0, 10)); // Get the first 10 items from the database
+      } catch (error) {
+        console.error("Error Fetching Data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleBeachClick = (id) => {
+    const selectedBeach = data.find((beach) => beach.id === id);
+    if (selectedBeach) {
+      navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
+    }
+  };
   
   return (
     <>
@@ -61,127 +89,22 @@ function RecommendedForYou() {
         <h5>Best recommended places in Mangalore</h5>
         {/* <Carousel responsive={responsive}> */}
         <Slider {...settings}>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="recommended-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Recommended</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-        {/* </Carousel> */}
+        {data.map((place) => (
+            <div className="recommended-cards" onClick={() => handleBeachClick(place.id)}>
+              <img src={place.IMAGE} alt="Loading, please wait" />
+              <div className="text-area">
+              <h4 className="place-name">{place.NAME}</h4>
+              <h6 className="place-location">{place.LOCATION}</h6>
+              <p>
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaRegStar />
+              </p>
+              </div>
+            </div>
+          ))}
         </Slider>
       </section>
     </>

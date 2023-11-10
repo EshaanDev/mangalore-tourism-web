@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import "react-multi-carousel/lib/styles.css";
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-import hotelimg from "../assets/images/hotel1.jpg";
 import { NextArrow, PrevArrow } from "./CustomArrows";
 import './comp-styles/CustomArrows.css';
 import "./comp-styles/TopBeaches.css";
 
 function TopBeaches() {
+  const [data, setData] = useState([]);
   // const responsive = {
   //   superLargeDesktop: {
   //     // the naming can be any, depends on you.
@@ -55,6 +52,33 @@ const settings = {
     prevArrow: <PrevArrow />, // Use the custom PrevArrow component
     nextArrow: <NextArrow />,
   };
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const dataCollection = collection(firestore, "beaches");
+  //       const querySnapshot = await getDocs(dataCollection);
+  //       const dataCollected = [];
+  //       querySnapshot.forEach((doc) => {
+  //         dataCollected.push({ id: doc.id, ...doc.data() });
+  //       });
+  //       setData(dataCollected.slice(0, 10)); // Get the first 10 items from the database
+  //     } catch (error) {
+  //       console.error("Error Fetching Data:", error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
+  // const handleBeachClick = (id) => {
+  //   const selectedBeach = data.find((beach) => beach.id === id);
+  //   if (selectedBeach) {
+  //     navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
+  //   }
+  // };
+
+
   return (
     <>
       <section className="top-beaches-section">
@@ -62,10 +86,11 @@ const settings = {
         <h5>Best recommended Beaches in Mangalore</h5>
         {/* <Carousel responsive={responsive} style={{ margin: "0" }}> */}
         <Slider {...settings}>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
+          <div className="beach-cards" >
+          {/* <img src= alt="Loading, please wait" /> */}
+          <div className="text-area">
+          <h4 className="place-name"></h4>
+          <h6 className="place-location"></h6>
             <p>
               <FaStar />
               <FaStar />
@@ -74,115 +99,7 @@ const settings = {
               <FaRegStar />
             </p>
           </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
           </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-          <div className="beach-cards">
-            <img src={hotelimg} />
-            <p>Name Of the Beach</p>
-            <p>Location</p>
-            <p>
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaRegStar />
-            </p>
-          </div>
-        {/* </Carousel> */}
         </Slider>
       </section>
     </>

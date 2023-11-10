@@ -1,15 +1,15 @@
 /* Custom styles for the Previous Arrow */
 .custom-prev-arrow {
   background-color: transparent; /* Change the background color */
-  color:white; /* Change the text color */
+  color:black; /* Change the text color */
   border: none; /* Remove the border */
   border-radius: 80%; /* Make it round */
   width: 30px; /* Set the width */
   height: 27px; /* Set the height */
   font-size: 24px; /* Set the font size */
   position: absolute; /* Position it as needed */
-  top: 45%; /* Center vertically */
-  left: 10px; /* Adjust the left position */
+  top: 41%; /* Center vertically */
+  left: -30px; /* Adjust the left position */
   transform: translateY(-50%); /* Center vertically */
   cursor: pointer; /* Add a pointer cursor */
   z-index: 1;
@@ -23,15 +23,15 @@
 /* Custom styles for the Next Arrow */
 .custom-next-arrow {
   background-color: transparent; /* Change the background color */
-  color: white; /* Change the text color */
+  color: black; /* Change the text color */
   border: none; /* Remove the border */
   border-radius: 80%; /* Make it round */
   width: 30px; /* Set the width */
   height: 27px; /* Set the height */
   font-size: 24px; /* Set the font size */
   position: absolute; /* Position it as needed */
-  top: 45%; /* Center vertically */
-  right: 90px; /* Adjust the right position */
+  top: 41%; /* Center vertically */
+  right: 20px; /* Adjust the right position */
   transform: translateY(-50%); /* Center vertically */
   cursor: pointer; /* Add a pointer cursor */
   z-index: 1;

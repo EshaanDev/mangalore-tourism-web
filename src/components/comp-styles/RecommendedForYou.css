@@ -25,12 +25,15 @@
 
 .recommended-cards img {
   height: 250px;
-  width: 250px;
+  width: 280px;
   padding: 5px;
   position: relative;
   /* margin-top: 100px; */
 }
 
+.recommended-cards .text-area{
+  width: 280px;
+}
 span .checked {
   background-color: orange;
 }

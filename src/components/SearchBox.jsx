@@ -1,17 +1,14 @@
-import React from "react";
-import "./comp-styles/SearchBox.css";
-import { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
 import { collection, getDocs } from "@firebase/firestore";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { firestore } from "../config";
-import SearchResults from "./SearchResults";
-import { Link } from "react-router-dom";
-import { GrLocation } from "react-icons/gr";
+import "./comp-styles/SearchBox.css";
 
 function SearchBox() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [click, setClick] = useState(false);
+  const navigate = useNavigate();
 
   // const dataRef = firebase.firestore().collection('hotels')
   useEffect(() => {
@@ -46,17 +43,24 @@ function SearchBox() {
     <option key={club.id} value={club.NAME} />
   ));
 
+  const handleBeachClick = (id) => {
+    const selectedBeach = data.find((club) => club.id === id);
+    if (selectedBeach) {
+      navigate(`/beachinfo`, { state: { beachData: selectedBeach } });
+    }
+  };
+
   const searchResults = filteredData.map((data) => {
     return (
-      <Link to="/beachinfo">
-        <div className="results">
+      // <Link to="/beachinfo">
+        <div className="results" onClick={() => handleBeachClick(data.id)}>
           <img src={data.IMAGE} alt="" />
           <div className="name-info">
             <h4>{data.NAME}</h4>
             <p>{data.LOCATION}</p>
           </div>
         </div>
-      </Link>
+      // </Link>
     );
   });
 
