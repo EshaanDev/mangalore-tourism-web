@@ -64,7 +64,7 @@ import '../components/comp-styles/StarRating.css';
 import { auth, firestore } from '../config'; // Import the Firestore instance
 
 
-const ReviewInfo = () => {
+const ReviewInfo = ({beachData}) => {
   const [rating, setRating] = useState(3); // default rating
   const [review, setReview] = useState('');
   const [userEmail, setUserEmail] = useState('');
