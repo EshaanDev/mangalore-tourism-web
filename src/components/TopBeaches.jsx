@@ -55,6 +55,8 @@ const settings = {
     prevArrow: <PrevArrow />, // Use the custom PrevArrow component
     nextArrow: <NextArrow />,
   };
+
+  
   return (
     <>
       <section className="top-beaches-section">

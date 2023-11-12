@@ -13,7 +13,7 @@ function HomePage() {
       <SearchBox />
       <InfoSection/>
       <RecommendedForYou/>
-      <TopBeaches/>
+      {/* <TopBeaches/> */}
       <TopRestaurants/> 
     </>
   )

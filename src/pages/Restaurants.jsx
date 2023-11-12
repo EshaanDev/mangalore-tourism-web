@@ -7,6 +7,7 @@ import "../components/comp-styles/Restaurants.css";
 import { firestore } from "../config";
 
 
+
 function Restaurants() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
