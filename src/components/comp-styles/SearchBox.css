@@ -99,7 +99,6 @@
   display: flex;
   gap: 10px;
   flex-direction: column;
-  
   z-index: -1;
   margin-left: 0;
   background-color: white;
@@ -107,6 +106,8 @@
   padding: 30px;
   padding-right: 0;
   border-radius: 50px 50px 50px 50px;
+  overflow: visible;
+  cursor: pointer;
 }
 
 
@@ -119,5 +120,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
