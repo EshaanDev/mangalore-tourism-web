@@ -9,7 +9,7 @@ function InfoSection() {
         <img src={conceptImg} alt="" />
         <div className="info-div">
           <p>
-            Mangalore, a coastal gem nestled along the Arabian Sea in the
+            <span>Mangalore</span>, a coastal gem nestled along the Arabian Sea in the
             southwestern part of India, is a place where natural beauty meets
             rich cultural heritage. "Tour My Mangalore" is an immersive tourism
             website project aimed at showcasing the diverse and enchanting
@@ -18,8 +18,6 @@ function InfoSection() {
             beaches, lush greenery, delectable cuisine, and a tapestry of
             traditions await.
           </p>
-          <p> Welcome to Mangalore – where every moment is an
-            invitation to explore, discover, and enjoy.</p>
         </div>
       </div>
     </>

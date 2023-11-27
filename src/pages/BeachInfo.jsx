@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
@@ -62,8 +60,8 @@ function BeachInfo() {
             <p>{beachData.LOCATION}</p>
           </div>
           <div className="weather-div">
-            <h1>Weather</h1>
-            <p>28° There will be 14 days of rain with an average of 43.0mm rain on those days. Average cloud cover will be 84%</p>
+          
+           <iframe src={beachData.GMAP} frameborder="0"></iframe>
           </div>
         </section>
         <ReviewInfo beachData={beachData} />
@@ -76,5 +74,3 @@ function BeachInfo() {
 
 
 export default BeachInfo;
-
-

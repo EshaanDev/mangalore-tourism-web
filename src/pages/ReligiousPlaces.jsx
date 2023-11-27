@@ -18,7 +18,7 @@ function ReligiousPlaces() {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const religiousPlacesCollection = collection(firestore, "religious-places");
+        const religiousPlacesCollection = collection(firestore, "religious-data");
         const querySnapshot = await getDocs(religiousPlacesCollection);
         const religiousPlacesData = [];
         querySnapshot.forEach((doc) => {

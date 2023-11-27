@@ -51,7 +51,7 @@
     height: 500px;
     width: 60%;
     text-align: center;
-    background-color: lightpink;
+    border: 2px solid black;
     border-right: 1px black solid;
     border-radius: 15px;
     padding: 20px;
@@ -61,7 +61,7 @@
     height: 500px;
     width: 40%;
     text-align: center;
-    background-color: lightcoral;
+    border: 2px solid black;
     border-left: 1px solid black;
     border-radius: 15px;
     margin-left: 5px;
@@ -220,4 +220,3 @@ h2{
      
       
 }
-

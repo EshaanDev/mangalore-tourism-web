@@ -1,34 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
-.info-section{
-   
-    padding: 60px;
-    height: 500px;
-    /* background-color: rgba(206, 170, 103, 0.436); */
-    background-color: rgba(245, 222, 179, 0.523);
-    display: flex;
-    justify-content: space-around;
-    border-radius: 0px 0px 40px 40px;
-    z-index: -1;
+.info-section {
+  padding: 60px;
+  height: 500px;
+  /* background-color: rgba(206, 170, 103, 0.436); */
+  background-color: rgba(245, 222, 179, 0.523);
+  display: flex;
+  justify-content: space-around;
+  border-radius: 0px 0px 40px 40px;
+  z-index: -1;
 }
 
-.info-section img{
-    height: 100%;
-    width: 50%;
-    border-radius: 20px;
-    border-top: none;
-    border:1px solid black;
-    overflow: hidden;
+.info-section img {
+  height: 100%;
+  width: 50%;
+  border-radius: 20px;
+  border-top: none;
+  border: 1px solid black;
+
 }
 
-.info-section p{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    
+.info-div span{
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
-.info-div{
-    height: 100%;
-    width: 30%;
-    
+.info-section p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+.info-div {
+  height: 100%;
+  width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+  .info-section {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0;
+  
+    align-items: center;
+    align-content: space-evenly;
+  }
+
+  .info-div{
+    width: 80%;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .info-section img{
+      margin: 20px;
+      height: 600px;
+      width: 300px;
+  }
+
+
+  .info-section p {
+    font-size: 0.7rem;
+    width: 100%;
+  }
 }

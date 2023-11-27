@@ -235,7 +235,7 @@ function TopRestaurants() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 2,
         },
       },
@@ -247,7 +247,7 @@ function TopRestaurants() {
         },
       },
     ],
-    prevArrow: <PrevArrow/>, // Use the custom PrevArrow component
+    prevArrow: <PrevArrow  className="prevArrow"/>, // Use the custom PrevArrow component
     nextArrow: <NextArrow />, // Use the custom NextArrow component
   };
 
@@ -290,17 +290,14 @@ function TopRestaurants() {
               <h4 className="place-name">{place.NAME}</h4>
               <h6 className="place-location">{place.LOCATION}</h6>
               <p>
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
+             
               </p>
               </div>
             </div>
           ))}
         </Slider>
       </section>
+
     </>
   );
 }

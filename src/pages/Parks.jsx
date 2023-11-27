@@ -19,7 +19,7 @@ function Parks(props) {
       try {
         const dataCollection = collection(
           firestore,
-          "parks-data"
+          "parksData"
         );
         const querySnapshot = await getDocs(dataCollection);
         const dataCollected = [];

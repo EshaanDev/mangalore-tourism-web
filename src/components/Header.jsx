@@ -1,6 +1,6 @@
 // import React from "react";
 // import { signInWithPopup } from "firebase/auth";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import { GiJugglingClubs, GiParkBench } from 'react-icons/gi';
 import { IoMdRestaurant } from 'react-icons/io';
@@ -8,22 +8,27 @@ import { LuHotel } from 'react-icons/lu';
 import { MdOutlineLiveTv, MdOutlineTempleHindu } from 'react-icons/md';
 import { Link } from "react-router-dom";
 import Logo from '../assets/icons/TourMyMangaloreLogo3Offi.svg';
+import altLogo from '../assets/icons/TourMyMangalore-logos_black.png'
 import SignIn from "./SignIn";
+import {TfiMenu} from 'react-icons/tfi'
 // import { auth, provider } from "../config.js";
 // import "./comp-styles/Header.css";
  
 
 
 
+
 function Header() {
+
+  const [menu,setMenu] = useState(false)
  
   return (
     <>
-      <header>
+      <header >
         <Link to="/">
-          <img className="Logo"  src={Logo} alt="" />
+          <img className="Logo"  src={Logo } alt="" />
         </Link>
-        <nav>
+        <nav className={menu ?  "header-section-mobile" : "header-section"}>
           <ul className="header-navs">
             <li>
             <FaUmbrellaBeach className="hover-change-icon" />
@@ -86,8 +91,13 @@ function Header() {
               <SignIn/>
              </li>
           </ul>
+         
         </nav>
-
+        <div className="hamburger-menu">
+            <TfiMenu onClick={() => {
+              setMenu(!menu)
+            }}/>
+          </div>
       </header>
     </>
   );

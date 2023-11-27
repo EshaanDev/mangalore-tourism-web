@@ -23,17 +23,17 @@ function RecommendedForYou() {
       items: 4,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      breakpoint: { max: 800, min: 464 },
+      items: 1,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 800, min: 0 },
       items: 1,
     },
   };
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4 ,
     slidesToScroll: 2,
@@ -42,8 +42,8 @@ function RecommendedForYou() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
       {
@@ -83,6 +83,7 @@ function RecommendedForYou() {
     }
   };
   
+  
   return (
     <>
       <section className="recommended-for-you-section">
@@ -96,13 +97,7 @@ function RecommendedForYou() {
               <div className="text-area">
               <h4 className="place-name">{place.NAME}</h4>
               <h6 className="place-location">{place.LOCATION}</h6>
-              <p>
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaRegStar />
-              </p>
+            
               </div>
             </div>
           ))}

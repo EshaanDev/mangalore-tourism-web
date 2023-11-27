@@ -19,7 +19,7 @@ function Restaurants() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const dataCollection = collection(firestore, "restaurants-data");
+        const dataCollection = collection(firestore, "restaurantsData");
         const querySnapshot = await getDocs(dataCollection);
         const dataCollected = [];
         querySnapshot.forEach((doc) => {

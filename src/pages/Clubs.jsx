@@ -16,7 +16,7 @@ function Clubs(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const dataCollection = collection(firestore, "Clubs-data");
+        const dataCollection = collection(firestore, "clubsData");
         const querySnapshot = await getDocs(dataCollection);
         const dataCollected = [];
         querySnapshot.forEach((doc) => {
@@ -69,7 +69,7 @@ function Clubs(props) {
             <h4 className="place-name">{data.NAME}</h4>
             <h6 className="place-location">
               <GrLocation className="location-icon" />
-              {data.ADDRESS}
+             {data.LOCATION}
             </h6>
           </div>
         </div>

@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk&display=swap");
 
  
+.prevArrow{
+  margin-right: 20px;
+}
  
  .restaurant-cards{
     height: 350px;

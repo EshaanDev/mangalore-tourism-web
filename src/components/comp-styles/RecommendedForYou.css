@@ -14,7 +14,7 @@
 .recommended-for-you-section {
   font-family: "Poppins", sans-serif;
   width: 90%;
-  padding: 40px 40px 40px 40px;
+  /* padding: 40px 40px 40px 40px; */
   margin-top: 40px;
   /* background-color: lightcyan;
   border-radius: 60px;
@@ -50,4 +50,19 @@ span .checked {
 
 .recommended-cards:hover p{
   text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+  .recommended-for-you-section{
+    padding: 0;
+    margin-left: 30px;
+  }
+
+  .recommended-cards{
+    margin-right: 40px;
+  }
+
+  .recommended-cards img{
+    margin-right: 15px;
+  }
 }

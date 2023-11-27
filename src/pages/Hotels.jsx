@@ -18,7 +18,7 @@ function Hotels(props) {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const hotelsCollection = collection(firestore, "hotels");
+        const hotelsCollection = collection(firestore, "hotels-data");
         const querySnapshot = await getDocs(hotelsCollection);
         const hotelsData = [];
         querySnapshot.forEach((doc) => {
